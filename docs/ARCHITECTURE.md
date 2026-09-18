@@ -36,6 +36,8 @@ The product introduction uses `developmentPhases` from the domain boundary and r
 
 The active adapter is selected in `src/data/repository.ts`. Routes call `getBenchmarkRepository`; components receive its serializable results through props. The current mock adapter validates fixture relationships before serving data.
 
+The recommendation flow remains framework-neutral: repository summaries enter domain normalization, ranking, explanation, and stack functions. `recommendByPhase` is the orchestration entry point for the three phase recommendations; `calculateRecommendedStack` applies the same priority to the complete workflow.
+
 The `@/*` alias resolves to `src/*` and should be used for imports that cross these top-level boundaries. Relative imports remain appropriate within a tightly related directory.
 
 Implementation and naming conventions for these boundaries are maintained in [`src/AGENTS.md`](../src/AGENTS.md).

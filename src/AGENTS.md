@@ -50,3 +50,9 @@ These rules apply to everything under `src/`. Repository-wide guidance remains i
 - Fix lint violations instead of suppressing them. Any unavoidable suppression must target the narrowest scope and include an adjacent rationale.
 - Let Prettier own formatting; do not introduce manual alignment or ESLint formatting rules that compete with it.
 - Update the closest `AGENTS.md` only for durable conventions, not one-off implementation notes.
+
+## Tests
+
+- Co-locate pure domain unit tests with the module under test using `*.test.ts`.
+- Put cross-boundary integration tests at the outer boundary that orchestrates the flow.
+- Keep test inputs deterministic and assert business outcomes rather than implementation details.

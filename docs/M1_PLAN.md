@@ -157,19 +157,20 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-012b-trusted-recommendation-core`
 - **GitHub:** [#32](https://github.com/ArianeZan/PhaseBench/issues/32)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-008C, PB-012A
 - Exercise the repository, rankings, explanations, and stack calculation together for all priorities; reconcile documentation and durable development rules.
 - **Acceptance:** the complete verification suite passes, integration tests prove different priority outcomes, and M1 documentation matches the implementation.
 
 ## M1 completion checklist
 
-- [ ] PB-006A–PB-006C merged
-- [ ] PB-007A–PB-007B merged
-- [ ] PB-008A–PB-008C merged
-- [ ] PB-009A–PB-009B merged
-- [ ] PB-010A–PB-010B merged
-- [ ] PB-011A merged
-- [ ] PB-012A–PB-012B merged
-- [ ] Domain, repository, fixture, scoring, explanation, and stack documentation reviewed
-- [ ] Unit and integration tests included in `npm run verify`
-- [ ] All M1 issues closed and `master` synchronized with GitHub
+- [x] PB-006A–PB-006C merged
+- [x] PB-007A–PB-007B merged
+- [x] PB-008A–PB-008C merged
+- [x] PB-009A–PB-009B merged
+- [x] PB-010A–PB-010B merged
+- [x] PB-011A merged
+- [x] PB-012A–PB-012B merged
+- [x] Domain, repository, fixture, scoring, explanation, and stack documentation reviewed
+- [x] Unit and integration tests included in `npm run verify`
+- [x] All M1 issues closed and `master` synchronized with GitHub
