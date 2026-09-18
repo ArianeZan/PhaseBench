@@ -41,6 +41,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 - **Branch:** `codex/pb-014b-synchronized-recommendations`
 - **GitHub:** [#36](https://github.com/ArianeZan/PhaseBench/issues/36)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-014A
 - Resolve the selected priority on the server and feed one snapshot into phase and stack calculations.
 - **Acceptance:** one priority change updates all recommendation outputs without duplicating scoring in components.

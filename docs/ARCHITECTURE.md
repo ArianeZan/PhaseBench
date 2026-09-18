@@ -38,6 +38,8 @@ The active adapter is selected in `src/data/repository.ts`. Routes call `getBenc
 
 The recommendation flow remains framework-neutral: repository summaries enter domain normalization, ranking, explanation, and stack functions. `recommendByPhase` is the orchestration entry point for the three phase recommendations; `calculateRecommendedStack` applies the same priority to the complete workflow.
 
+`loadDashboardData` is the route-facing application query for the dashboard. It reads one catalog and one daily snapshot, then derives phase recommendations and the stack under one validated priority. Components receive this prepared data and never invoke repositories or scoring rules.
+
 The `@/*` alias resolves to `src/*` and should be used for imports that cross these top-level boundaries. Relative imports remain appropriate within a tightly related directory.
 
 Implementation and naming conventions for these boundaries are maintained in [`src/AGENTS.md`](../src/AGENTS.md).

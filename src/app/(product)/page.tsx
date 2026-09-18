@@ -5,12 +5,14 @@ import { Container } from "@/components/ui/container";
 import { developmentPhases } from "@/domain/phases";
 import { providers } from "@/domain/providers";
 import { resolveRecommendationPriority } from "@/domain/priorities";
+import { loadDashboardData } from "@/data/dashboard-data";
 
 export default async function Home({ searchParams }: PageProps<"/">) {
   const requestedPriority = (await searchParams).priority;
   const selectedPriority = resolveRecommendationPriority(
     Array.isArray(requestedPriority) ? requestedPriority[0] : requestedPriority,
   );
+  const dashboard = await loadDashboardData(selectedPriority);
 
   return (
     <Container className="py-section flex min-h-[calc(100vh-10rem)] flex-col justify-center">
@@ -46,6 +48,13 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           <p className="text-label text-text-muted">Saved in the page URL</p>
         </div>
         <PrioritySelector selectedPriority={selectedPriority} />
+        <p className="text-label mt-4 text-text-muted" role="status">
+          Updated {dashboard.date} · {dashboard.recommendations.length} phase
+          recommendations ·{" "}
+          {dashboard.stack.status === "complete"
+            ? "Complete workflow"
+            : "Incomplete workflow"}
+        </p>
       </section>
 
       <section
