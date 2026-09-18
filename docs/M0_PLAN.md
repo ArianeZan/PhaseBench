@@ -21,6 +21,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-001A · Make PhaseBench runnable locally
 
 - **Branch:** `codex/pb-001a-runnable-app`
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** none
 - Scaffold Next.js with App Router, TypeScript, Tailwind CSS, and `src/` layout without overwriting repository documentation.
 - Preserve strict TypeScript settings and configure the `@/*` import alias.

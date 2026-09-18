@@ -18,6 +18,7 @@ blob-report/
 
 # Build and tool caches
 *.tsbuildinfo
+next-env.d.ts
 .turbo/
 .cache/
 .eslintcache
