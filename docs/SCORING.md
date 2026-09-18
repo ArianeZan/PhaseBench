@@ -79,3 +79,9 @@ Rankings accept summaries from exactly one date and phase. Candidates without ev
 4. stable model ID, ascending.
 
 Ranks are one-based. This sequence makes tied results independent of repository or input order and keeps the strongest evidence ahead before the final lexical fallback.
+
+## Winner explanations
+
+Explanations select two or three non-missing metrics from the winner according to the chosen priority. Quality begins with quality and pass evidence, Value with cost, Speed with latency, Reliability with stability, and Balanced with quality, cost, and latency. Every reason carries its raw value and explicit unit alongside concise English copy.
+
+The generator describes observed winner values without claiming an unsupported margin over another model. If fewer than two relevant metrics are available, it returns an explicit error instead of inventing a persuasive explanation.

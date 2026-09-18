@@ -137,6 +137,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-011a-verifiable-winner-explanations`
 - **GitHub:** [#30](https://github.com/ArianeZan/PhaseBench/issues/30)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-010B
 - Produce two or three concise, metric-based reasons aligned with the selected priority.
 - **Acceptance:** every reason is derived from winner data, includes a value and unit where relevant, and never makes an unsupported comparative claim.
