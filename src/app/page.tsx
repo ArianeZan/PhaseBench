@@ -34,11 +34,7 @@ export default function Home() {
           className="mt-14 grid gap-3 sm:mt-20 sm:grid-cols-3"
         >
           {developmentPhases.map((phase, index) => (
-            <PhaseCard
-              key={phase.name}
-              index={index}
-              phase={phase}
-            />
+            <PhaseCard key={phase.name} index={index} phase={phase} />
           ))}
         </section>
       </main>

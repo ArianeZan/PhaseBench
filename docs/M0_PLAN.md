@@ -99,6 +99,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-003b-consistent-formatting`
 - **GitHub:** [#9](https://github.com/ArianeZan/PhaseBench/issues/9)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-001A
 - Add a consistent formatter configuration, ignore generated files, and expose check/write scripts.
 - **Acceptance:** the formatting check passes and repeated formatting is idempotent.

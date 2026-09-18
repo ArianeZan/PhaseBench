@@ -4,13 +4,13 @@ PhaseBench uses explicit source boundaries so product rules can evolve independe
 
 ## Source map
 
-| Path | Responsibility | May depend on |
-| --- | --- | --- |
-| `src/app` | Next.js routes, layouts, metadata, and route-level composition | `components`, `domain`, `data`, `lib` |
-| `src/components` | Reusable presentation and interaction components | `domain`, `lib` |
-| `src/domain` | PhaseBench concepts, types, and deterministic business rules | other domain modules only |
-| `src/data` | Repository implementations, fixtures, database access, and provider adapters | `domain`, `lib` |
-| `src/lib` | Small framework-neutral technical utilities | other `lib` modules only |
+| Path             | Responsibility                                                               | May depend on                         |
+| ---------------- | ---------------------------------------------------------------------------- | ------------------------------------- |
+| `src/app`        | Next.js routes, layouts, metadata, and route-level composition               | `components`, `domain`, `data`, `lib` |
+| `src/components` | Reusable presentation and interaction components                             | `domain`, `lib`                       |
+| `src/domain`     | PhaseBench concepts, types, and deterministic business rules                 | other domain modules only             |
+| `src/data`       | Repository implementations, fixtures, database access, and provider adapters | `domain`, `lib`                       |
+| `src/lib`        | Small framework-neutral technical utilities                                  | other `lib` modules only              |
 
 ## Dependency direction
 

@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+.turbo/
+.cache/
+.idea/
+.vscode/
+package-lock.json
+next-env.d.ts
+*.ico
+*.db
+*.sqlite
+*.sqlite3

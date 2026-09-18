@@ -27,12 +27,12 @@ A task is done when it meets its acceptance criteria, works in light and dark th
 
 ## Milestones
 
-| Milestone | Outcome | Tasks |
-| --- | --- | --- |
-| M0 — Foundation | Runnable project with agreed conventions | PB-001–PB-005 |
-| M1 — Core | Data and recommendation engine | PB-006–PB-012 |
-| M2 — Dashboard | Complete MVP experience | PB-013–PB-021 |
-| M3 — Quality | Verified, accessible, deployable product | PB-022–PB-027 |
+| Milestone                | Outcome                                         | Tasks         |
+| ------------------------ | ----------------------------------------------- | ------------- |
+| M0 — Foundation          | Runnable project with agreed conventions        | PB-001–PB-005 |
+| M1 — Core                | Data and recommendation engine                  | PB-006–PB-012 |
+| M2 — Dashboard           | Complete MVP experience                         | PB-013–PB-021 |
+| M3 — Quality             | Verified, accessible, deployable product        | PB-022–PB-027 |
 | M4 — Real-data readiness | Boundaries ready for SQLite and real benchmarks | PB-028–PB-032 |
 
 ## M0 — Foundation

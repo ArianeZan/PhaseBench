@@ -4,10 +4,10 @@ Architecture Decision Records (ADRs) preserve decisions that shape PhaseBench an
 
 ## Index
 
-| ADR | Status | Decision |
-| --- | --- | --- |
-| [0001](0001-use-nextjs-app-router.md) | Accepted | Use the Next.js App Router |
-| [0002](0002-separate-data-access-from-ui.md) | Accepted | Separate data access from UI |
+| ADR                                              | Status   | Decision                             |
+| ------------------------------------------------ | -------- | ------------------------------------ |
+| [0001](0001-use-nextjs-app-router.md)            | Accepted | Use the Next.js App Router           |
+| [0002](0002-separate-data-access-from-ui.md)     | Accepted | Separate data access from UI         |
 | [0003](0003-use-tailwind-and-semantic-tokens.md) | Accepted | Use Tailwind CSS and semantic tokens |
 
 ## Adding a decision
