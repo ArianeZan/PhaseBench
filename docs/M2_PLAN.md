@@ -12,6 +12,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 - **Branch:** `codex/pb-013a-shared-product-shell`
 - **GitHub:** [#33](https://github.com/ArianeZan/PhaseBench/issues/33)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** M1
 - Create the responsive header, content frame, and footer shared by product routes.
 - **Acceptance:** 360 px and desktop layouts remain readable; theme control and product identity are consistently available.

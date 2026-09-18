@@ -50,10 +50,12 @@ The command stops at the first failure and runs checks in this order:
 
 1. Formatting check
 2. ESLint
-3. TypeScript
+3. Next.js route type generation and TypeScript
 4. Vitest unit and integration tests
 5. Production build
 
 This order puts fast feedback first while keeping the production build as the final integration check. Any failed command returns a non-zero exit code and blocks the remaining sequence.
 
 Run deterministic domain tests independently with `npm test`.
+
+`npm run typecheck` regenerates Next.js route helpers before invoking TypeScript. This prevents stale generated route declarations after pages or layouts move.
