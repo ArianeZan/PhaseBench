@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ProviderBadge } from "@/components/provider-badge";
+import { ThemeControl } from "@/components/theme-control";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -16,9 +17,12 @@ export default function FoundationPage() {
   return (
     <main className="py-section min-h-screen bg-background text-foreground">
       <Container>
-        <p className="text-label font-mono font-semibold tracking-[0.16em] text-accent uppercase">
-          M0 interface foundation
-        </p>
+        <div className="flex items-center justify-between gap-4">
+          <p className="text-label font-mono font-semibold tracking-[0.16em] text-accent uppercase">
+            M0 interface foundation
+          </p>
+          <ThemeControl />
+        </div>
         <h1 className="text-display mt-4 max-w-3xl font-semibold text-balance">
           Reusable, accessible building blocks.
         </h1>

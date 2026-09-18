@@ -173,6 +173,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-005b-theme-choice`
 - **GitHub:** [#16](https://github.com/ArianeZan/PhaseBench/issues/16)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-005A, PB-004D
 - Add a keyboard-accessible control with an unambiguous accessible name and visible focus state.
 - **Acceptance:** users can switch themes, the choice persists after reload, and both modes render all foundation components correctly.

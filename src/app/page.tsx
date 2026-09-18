@@ -1,6 +1,7 @@
 import { BrandMark } from "@/components/brand-mark";
 import { PhaseCard } from "@/components/phase-card";
 import { ProviderBadge } from "@/components/provider-badge";
+import { ThemeControl } from "@/components/theme-control";
 import { developmentPhases } from "@/domain/phases";
 import { providers } from "@/domain/providers";
 
@@ -9,9 +10,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="px-page mx-auto flex w-full max-w-6xl items-center justify-between py-6">
         <BrandMark />
-        <span className="text-label rounded-control border border-border px-3 py-1.5 font-medium text-text-muted">
-          Foundation in progress
-        </span>
+        <ThemeControl />
       </header>
 
       <main className="px-page py-section mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center">

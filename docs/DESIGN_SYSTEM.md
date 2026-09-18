@@ -105,3 +105,5 @@ Theme state is resolved by `next-themes` before React hydrates:
 The resolved value is applied as `light` or `dark` on the root HTML class. The root layout uses `suppressHydrationWarning` only on that element because the pre-hydration script updates its class. Theme transitions are temporarily disabled during resolution or changes to prevent distracting color flashes. Browser-native controls receive the matching `color-scheme` value.
 
 The provider is the smallest shared client boundary around the server-rendered application; pages and layouts remain Server Components.
+
+`ThemeControl` provides a compact light/dark toggle with a theme-specific accessible name, native button keyboard behavior, and the shared visible focus treatment. It renders disabled until the client theme is known, preventing server/client markup differences. Selecting a mode writes the existing `phasebench-theme` preference, so the choice remains active after reload. Use this shared control instead of introducing route-specific theme switches.
