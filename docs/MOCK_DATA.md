@@ -15,3 +15,7 @@ Every case includes expected input and output tokens. These assumptions provide 
 ## Fixture rules
 
 Fixtures use stable dates and formulas, never the wall clock, random numbers, or network data. References between providers, models, suites, cases, summaries, and runs must be valid. The repository implementation validates those relationships before serving data.
+
+The history spans 31 inclusive days from 2026-08-19 through 2026-09-18. Each model-phase pair has a deliberately different base profile plus a small deterministic wave and gradual trend. Claude leads Debate quality and reliability, GPT leads Plan and Build quality, Gemini emphasizes speed at competitive quality, and Mistral emphasizes low cost. Sparse missing judge values exercise incomplete-data behavior without making a full model or phase unavailable.
+
+The latest day also contains one detailed run for every model and phase. Each run covers all five suite cases and records configuration, attempts, test counts, judge evidence, cost, latency, and tokens.

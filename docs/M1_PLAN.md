@@ -77,6 +77,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-008b-month-of-benchmark-results`
 - **GitHub:** [#24](https://github.com/ArianeZan/PhaseBench/issues/24)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-008A
 - Generate at least 30 days of deterministic summaries and representative runs, including controlled variation and occasional incomplete metrics.
 - **Acceptance:** identical inputs produce identical data, dates are stable, and the dataset creates meaningful trade-offs between quality, value, speed, and reliability.
