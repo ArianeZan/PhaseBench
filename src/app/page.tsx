@@ -7,23 +7,23 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="px-page mx-auto flex w-full max-w-6xl items-center justify-between py-6">
         <BrandMark />
-        <span className="rounded-control border border-border px-3 py-1.5 text-xs font-medium text-text-muted">
+        <span className="text-label rounded-control border border-border px-3 py-1.5 font-medium text-text-muted">
           Foundation in progress
         </span>
       </header>
 
       <main className="px-page py-section mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center">
         <section aria-labelledby="hero-title" className="max-w-4xl">
-          <p className="mb-5 font-mono text-xs font-semibold tracking-[0.22em] text-accent uppercase sm:text-sm">
+          <p className="text-label mb-5 font-mono font-semibold tracking-[0.22em] text-accent uppercase">
             AI model intelligence for software teams
           </p>
           <h1
             id="hero-title"
-            className="max-w-3xl text-5xl leading-[0.98] font-semibold tracking-[-0.045em] text-balance sm:text-7xl lg:text-8xl"
+            className="text-display max-w-3xl font-semibold text-balance"
           >
             The right AI model for every phase.
           </h1>
-          <p className="mt-7 max-w-2xl text-base leading-7 text-text-muted sm:text-lg sm:leading-8">
+          <p className="text-body-lg mt-7 max-w-2xl text-text-muted">
             PhaseBench turns reproducible benchmarks into daily recommendations
             for every stage of AI-assisted development.
           </p>
@@ -39,7 +39,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="px-page mx-auto flex w-full max-w-6xl items-center justify-between border-t border-border py-5 text-xs text-text-muted">
+      <footer className="text-label px-page mx-auto flex w-full max-w-6xl items-center justify-between border-t border-border py-5 text-text-muted">
         <span>PhaseBench</span>
         <span>Debate · Plan · Build</span>
       </footer>

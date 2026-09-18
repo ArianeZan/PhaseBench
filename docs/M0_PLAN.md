@@ -131,6 +131,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-004b-readable-content`
 - **GitHub:** [#12](https://github.com/ArianeZan/PhaseBench/issues/12)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-004A
 - Configure the chosen local or framework-optimized fonts and a responsive type scale.
 - **Acceptance:** fonts load without layout-breaking fallback behavior; headings and body text remain readable at 360 px.

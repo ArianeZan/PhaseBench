@@ -47,3 +47,22 @@ The core text combinations meet WCAG AA for normal text:
 | Dark  | accent foreground on accent | 9.2:1    |
 
 Status colors must not be the only indication of meaning. Validate any new foreground/background pairing rather than assuming that the presence of a token guarantees contrast.
+
+## Typography
+
+PhaseBench self-hosts the variable Geist Sans and Geist Mono families through the official `geist` npm package. Both families are released under the SIL Open Font License and are bundled into the application build, so production builds do not depend on a font CDN.
+
+- **Geist Sans** is the default interface and content family.
+- **Geist Mono** is reserved for benchmark identifiers, compact labels, measurements, and technical data.
+
+The responsive scale exposes semantic utilities:
+
+| Utility        | Intended use                               |
+| -------------- | ------------------------------------------ |
+| `text-display` | Primary page statement or product headline |
+| `text-heading` | Card and section headings                  |
+| `text-body-lg` | Introductory or emphasized body copy       |
+| `text-body`    | Standard supporting content                |
+| `text-label`   | Compact labels, metadata, and status text  |
+
+Use the semantic scale before adding arbitrary font sizes. At 360 px, `text-display` resolves to 48 px and wraps naturally; body copy remains at least 14 px with a generous line height.
