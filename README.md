@@ -52,5 +52,6 @@ The current application is the initial Next.js foundation. Product-specific scre
 - [M0 execution plan](docs/M0_PLAN.md)
 - [Architecture and source boundaries](docs/ARCHITECTURE.md)
 - [Architecture decision records](docs/decisions/README.md)
+- [Code quality](docs/CODE_QUALITY.md)
 - [Delivery workflow](docs/DELIVERY_WORKFLOW.md)
 - [Repository working agreement](AGENTS.md)

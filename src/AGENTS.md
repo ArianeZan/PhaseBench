@@ -46,4 +46,5 @@ These rules apply to everything under `src/`. Repository-wide guidance remains i
 
 - Add files to `data` or `lib` only for a concrete use case; do not create placeholder abstractions.
 - Keep a module focused on one responsibility and extract code when it acquires a second reason to change.
+- Fix lint violations instead of suppressing them. Any unavoidable suppression must target the narrowest scope and include an adjacent rationale.
 - Update the closest `AGENTS.md` only for durable conventions, not one-off implementation notes.

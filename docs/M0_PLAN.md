@@ -89,6 +89,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-003a-automatic-code-checks`
 - **GitHub:** [#8](https://github.com/ArianeZan/PhaseBench/issues/8)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-001A
 - Configure ESLint for Next.js and TypeScript with no unexplained rule suppression.
 - **Acceptance:** `npm run lint` succeeds on the repository and fails for a known invalid sample during local verification.
