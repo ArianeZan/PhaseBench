@@ -130,6 +130,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-019B · Explain each model's performance profile
 
+- **Status:** Completed
 - **Branch:** `codex/pb-019b-model-performance-profile`
 - **GitHub:** [#45](https://github.com/ArianeZan/PhaseBench/issues/45)
 - **Dependencies:** PB-019A, PB-017A
@@ -188,7 +189,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [x] PB-016A merged
 - [x] PB-017A–PB-017B merged
 - [x] PB-018A–PB-018B merged
-- [ ] PB-019A–PB-019B merged (PB-019A completed)
+- [x] PB-019A–PB-019B merged
 - [ ] PB-020A–PB-020B merged
 - [ ] PB-021A–PB-021C merged
 - [ ] Dashboard routes verified in both themes at 360 px and desktop width
