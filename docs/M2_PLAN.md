@@ -170,6 +170,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-021B · Add calm, accessible feedback
 
+- **Status:** Completed
 - **Branch:** `codex/pb-021b-accessible-interface-feedback`
 - **GitHub:** [#49](https://github.com/ArianeZan/PhaseBench/issues/49)
 - **Dependencies:** PB-021A

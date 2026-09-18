@@ -76,7 +76,7 @@ function Choice({
     <Link
       href={href}
       aria-current={selected ? "true" : undefined}
-      className={`rounded-control border px-3 py-2 text-label font-medium transition-colors ${selected ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface hover:bg-surface-muted"}`}
+      className={`rounded-control min-h-11 border px-3 py-2 text-label font-medium transition-colors ${selected ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface hover:bg-surface-muted"}`}
     >
       {children}
     </Link>

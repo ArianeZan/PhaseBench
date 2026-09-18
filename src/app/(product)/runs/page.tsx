@@ -153,7 +153,7 @@ function Select({
       <select
         name={name}
         defaultValue={value}
-        className="mt-2 w-full rounded-control border border-border bg-surface px-3 py-3 text-foreground"
+        className="mt-2 min-h-11 w-full rounded-control border border-border bg-surface px-3 py-3 text-foreground"
       >
         {children}
       </select>

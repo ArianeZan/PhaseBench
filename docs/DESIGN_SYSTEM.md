@@ -125,3 +125,5 @@ Performance history uses URL-backed phase, metric, and range controls. Charts mu
 The comparison table identifies winners with text, never color alone. It keeps explicit units in column headings or values and uses horizontal scrolling inside its own bordered region on narrow screens so no model metric is discarded.
 
 Product routes share stable loading and error states. Loading placeholders preserve the page hierarchy, expose a polite status, and stop animating under reduced-motion preferences. Recoverable errors provide retry and dashboard actions without exposing internal messages. Empty collections and missing metrics must use direct English explanations and a useful next action rather than collapsing their section.
+
+Interactive elements share a visible accent focus ring and use manipulation touch behavior. Primary navigation, chart controls, form controls, and buttons maintain a minimum 44 px target. Hover and selection feedback may reinforce state, but focus, text, and native semantics must communicate the same information. Transitions remain color-only and are effectively disabled by the global reduced-motion rule.

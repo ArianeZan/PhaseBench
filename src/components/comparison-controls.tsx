@@ -75,7 +75,7 @@ function Select({
     <label className="text-label font-semibold">
       {label}
       <select
-        className="mt-2 w-full rounded-control border border-border bg-surface px-3 py-3 text-foreground"
+        className="mt-2 min-h-11 w-full rounded-control border border-border bg-surface px-3 py-3 text-foreground"
         name={name}
         defaultValue={value}
       >

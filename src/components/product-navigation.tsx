@@ -31,7 +31,7 @@ export function ProductNavigation() {
               <Link
                 aria-current={active ? "page" : undefined}
                 className={classNames(
-                  "text-label rounded-control flex min-h-10 items-center justify-center px-3 font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
+                  "text-label rounded-control flex min-h-11 items-center justify-center px-3 font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
                   active
                     ? "bg-surface text-foreground shadow-card"
                     : "text-text-muted hover:text-foreground",
