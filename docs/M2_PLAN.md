@@ -141,6 +141,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-020A · Make benchmark activity traceable
 
+- **Status:** Completed
 - **Branch:** `codex/pb-020a-traceable-benchmark-history`
 - **GitHub:** [#46](https://github.com/ArianeZan/PhaseBench/issues/46)
 - **Dependencies:** PB-008C, PB-013B
@@ -190,7 +191,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [x] PB-017A–PB-017B merged
 - [x] PB-018A–PB-018B merged
 - [x] PB-019A–PB-019B merged
-- [ ] PB-020A–PB-020B merged
+- [ ] PB-020A–PB-020B merged (PB-020A completed)
 - [ ] PB-021A–PB-021C merged
 - [ ] Dashboard routes verified in both themes at 360 px and desktop width
 - [ ] Unit/integration tests and production build pass
