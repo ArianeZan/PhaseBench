@@ -17,6 +17,8 @@ The interface deliberately contains no fixture, SQL, React, or Next.js types. A 
 
 ## Composition
 
-`createRepositoryAccessor` turns a repository factory into a lazy, process-local singleton accessor. The data boundary owns both the factory selection and accessor. Routes import only the configured `getBenchmarkRepository` entry point added alongside the active implementation; they do not instantiate adapters. Reusable components never import either entry point or repository contract.
+`createRepositoryAccessor` turns a repository factory into a lazy, process-local singleton accessor. The data boundary owns both the factory selection and accessor. Routes import only `getBenchmarkRepository` from `src/data/repository`; they do not instantiate adapters. Reusable components never import either entry point or repository contract.
 
 Keeping factory selection out of the contract lets mock and SQLite implementations use different construction details while preserving the same consumer API. The accessor itself has no environment or framework dependency and can be constructed independently in tests.
+
+The current entry point selects `createMockBenchmarkRepository`. That adapter validates every fixture relationship on first access, implements documented filters, returns history in chronological order and runs newest first, and returns `null` for missing single records. A future SQLite adapter replaces only the factory selection.

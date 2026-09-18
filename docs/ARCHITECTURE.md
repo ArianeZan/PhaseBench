@@ -34,6 +34,8 @@ Dependencies should point toward stable concepts:
 
 The product introduction uses `developmentPhases` from the domain boundary and renders each phase with a reusable component. M1 domain contracts describe the benchmark and recommendation vocabulary. The data boundary exposes `BenchmarkRepository`, an asynchronous read contract that keeps fixture and future SQLite details out of routes and components.
 
+The active adapter is selected in `src/data/repository.ts`. Routes call `getBenchmarkRepository`; components receive its serializable results through props. The current mock adapter validates fixture relationships before serving data.
+
 The `@/*` alias resolves to `src/*` and should be used for imports that cross these top-level boundaries. Relative imports remain appropriate within a tightly related directory.
 
 Implementation and naming conventions for these boundaries are maintained in [`src/AGENTS.md`](../src/AGENTS.md).

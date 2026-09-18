@@ -86,6 +86,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-008c-queryable-mock-data`
 - **GitHub:** [#25](https://github.com/ArianeZan/PhaseBench/issues/25)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-007B, PB-008B
 - Implement the repository contract over the fixtures and validate references at its boundary.
 - **Acceptance:** filters return immutable, chronologically ordered results; missing entities have documented behavior; UI code does not import fixtures.
