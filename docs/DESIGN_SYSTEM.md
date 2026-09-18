@@ -113,3 +113,5 @@ Global motion is reduced when the operating system exposes `prefers-reduced-moti
 ## Product shell
 
 Product routes share `AppShell` through the `(product)` route group. The shell owns the persistent brand link, theme control, main landmark, responsive content width, and synthetic-data footer. Route groups organize shared UI without changing public URLs. Route pages provide only their page-specific content and must not recreate shell landmarks.
+
+Primary navigation uses Next.js links and a small client boundary that reads only the pathname. The active destination exposes `aria-current="page"` and a text/surface treatment. A stable Suspense fallback protects future dynamic product routes while preserving the rest of the server-rendered shell.

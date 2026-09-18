@@ -21,6 +21,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 - **Branch:** `codex/pb-013b-clear-product-navigation`
 - **GitHub:** [#34](https://github.com/ArianeZan/PhaseBench/issues/34)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-013A
 - Add accessible navigation for Dashboard, Comparison, and Runs with a reliable active state.
 - **Acceptance:** native links work without JavaScript, keyboard focus is visible, and the current area is announced.
