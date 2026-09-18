@@ -35,3 +35,22 @@ npm run format
 ```
 
 Prettier is the single formatting authority. Its configuration is editor-neutral, and generated output, dependency folders, lockfiles, local databases, and editor state are excluded. Do not hand-format code against Prettier output or add competing formatter rules to ESLint.
+
+Git normalizes maintained text files to LF through `.gitattributes`, including on Windows. This keeps formatter results stable across development environments; binary image formats are explicitly excluded from text normalization.
+
+## Pre-merge verification
+
+Run the complete local quality gate before merging:
+
+```bash
+npm run verify
+```
+
+The command stops at the first failure and runs checks in this order:
+
+1. Formatting check
+2. ESLint
+3. TypeScript
+4. Production build
+
+This order puts fast feedback first while keeping the production build as the final integration check. Any failed command returns a non-zero exit code and blocks the remaining sequence.

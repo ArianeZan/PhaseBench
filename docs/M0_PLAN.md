@@ -109,6 +109,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-003c-pre-merge-verification`
 - **GitHub:** [#10](https://github.com/ArianeZan/PhaseBench/issues/10)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-001B, PB-003A, PB-003B
 - Add a single local command that runs formatting checks, linting, type checking, and the production build in a clear order.
 - **Acceptance:** the command exits non-zero on any failure and completes successfully on the branch.

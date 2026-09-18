@@ -31,7 +31,7 @@ The branch name must describe the outcome in language understandable to product 
 
 Keep the branch limited to the selected task. Before closing it:
 
-1. Run every relevant automated check.
+1. Run `npm run verify` for implementation or configuration changes. Documentation-only tasks may use narrower relevant checks.
 2. Verify the task's acceptance criteria.
 3. Review and update affected documentation.
 4. Review applicable `AGENTS.md` files and update them only when a durable rule has emerged.
