@@ -37,6 +37,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run format`       | Format maintained files with Prettier.                 |
 | `npm run format:check` | Check formatting without changing files.               |
 | `npm run typecheck`    | Validate TypeScript without emitting files.            |
+| `npm test`             | Run deterministic unit and integration tests.          |
 | `npm run verify`       | Run every required pre-merge check in sequence.        |
 
 Run commands from the repository root. The project uses npm and commits `package-lock.json`; do not introduce a second package-manager lockfile.

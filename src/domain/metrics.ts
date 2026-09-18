@@ -33,3 +33,10 @@ export type NormalizedDimensions = Readonly<{
   speed: number;
   reliability: number;
 }>;
+
+export type NormalizedDimensionScores = Readonly<{
+  quality: number | null;
+  value: number | null;
+  speed: number | null;
+  reliability: number | null;
+}>;

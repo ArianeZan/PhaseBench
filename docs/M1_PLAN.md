@@ -106,6 +106,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-009b-comparable-metric-scores`
 - **GitHub:** [#27](https://github.com/ArianeZan/PhaseBench/issues/27)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-009A
 - Implement pure normalization functions and introduce the minimal unit-test setup needed to verify them.
 - **Acceptance:** tests cover normal, boundary, missing, outlier, reversed-direction, and zero-range cases.
