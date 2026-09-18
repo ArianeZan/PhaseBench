@@ -77,6 +77,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-002c-decision-history`
 - **GitHub:** [#7](https://github.com/ArianeZan/PhaseBench/issues/7)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-002A
 - Add a small ADR template and record the initial decisions: App Router, mock-data repository boundary, and styling approach.
 - **Acceptance:** decisions include context, choice, consequences, and status; contributors can add later ADRs consistently.
