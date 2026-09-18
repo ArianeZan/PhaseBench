@@ -67,6 +67,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-002b-development-conventions`
 - **GitHub:** [#6](https://github.com/ArianeZan/PhaseBench/issues/6)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-002A
 - Record conventions for filenames, React components, types, constants, server/client boundaries, and import direction.
 - **Acceptance:** conventions are concise, consistent with the scaffold, and captured in the closest applicable `AGENTS.md` file.

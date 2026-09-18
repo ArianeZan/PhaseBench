@@ -24,7 +24,7 @@ This file defines the repository-wide working agreement. Add nested `AGENTS.md` 
 - Branch names follow `codex/<task-id>-<business-outcome>`, for example `codex/pb-001a-runnable-app`.
 - Keep each branch focused on its task and independently reviewable.
 - Do not mix opportunistic refactors with the task at hand.
-- Use Conventional Commit messages and include the task ID when useful, for example `feat: scaffold Next.js app (PB-001A)`.
+- Use Conventional Commit messages and include the task ID when useful, for example `feat: make PhaseBench runnable locally (PB-001A)`.
 - Never commit secrets, local databases, generated output, dependency directories, or editor state.
 - Scope every GitHub CLI issue or pull-request command explicitly to `ArianeZan/PhaseBench` with `--repo ArianeZan/PhaseBench`.
 - Keep the GitHub issue state and the corresponding status in `docs/M0_PLAN.md` aligned when completing an M0 task.
@@ -53,5 +53,6 @@ Documentation and `AGENTS.md` review are part of every subtask, not separate cle
 
 - Product backlog: `docs/BACKLOG.md`
 - Current M0 execution plan: `docs/M0_PLAN.md`
+- Architecture and source boundaries: `docs/ARCHITECTURE.md`
 - Branch, rebase, and integration workflow: `docs/DELIVERY_WORKFLOW.md`
 - If implementation and documentation disagree, resolve the discrepancy within the active task.

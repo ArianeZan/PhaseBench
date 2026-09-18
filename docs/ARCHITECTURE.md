@@ -35,3 +35,5 @@ Dependencies should point toward stable concepts:
 The product introduction uses `developmentPhases` from the domain boundary and renders each phase with a reusable component. Data and shared-utility boundaries contain no speculative implementation; they document where concrete M1 capabilities will live when those capabilities are introduced.
 
 The `@/*` alias resolves to `src/*` and should be used for imports that cross these top-level boundaries. Relative imports remain appropriate within a tightly related directory.
+
+Implementation and naming conventions for these boundaries are maintained in [`src/AGENTS.md`](../src/AGENTS.md).
