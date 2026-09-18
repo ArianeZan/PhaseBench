@@ -61,6 +61,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 - **Branch:** `codex/pb-015b-daily-recommendation-change`
 - **GitHub:** [#38](https://github.com/ArianeZan/PhaseBench/issues/38)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-015A
 - Compare the current and previous daily ranking under the same priority.
 - **Acceptance:** score and rank movement are deterministic, unit-tested, and expressed without color-only meaning.

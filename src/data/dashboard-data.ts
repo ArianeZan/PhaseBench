@@ -4,6 +4,10 @@ import type { DailyModelSummary } from "@/domain/metrics";
 import type { AiModel } from "@/domain/models";
 import { developmentPhases, type DevelopmentPhase } from "@/domain/phases";
 import type { RecommendationPriority } from "@/domain/priorities";
+import {
+  calculateRecommendationChange,
+  type RecommendationChange,
+} from "@/domain/recommendation-change";
 import { recommendByPhase } from "@/domain/recommendation-engine";
 import type {
   PhaseRecommendation,
@@ -18,6 +22,7 @@ export type DashboardRecommendation = Readonly<{
   provider: Provider;
   recommendation: PhaseRecommendation;
   summary: DailyModelSummary;
+  change: RecommendationChange;
 }>;
 
 export type DashboardData = Readonly<{
@@ -38,8 +43,13 @@ export async function loadDashboardData(
     repository.getCatalog(),
     repository.getDailySnapshot(),
   ]);
+  const previousDate = shiftDate(snapshot[0]?.date, -1);
+  const previousSnapshot = previousDate
+    ? await repository.getDailySnapshot({ date: previousDate })
+    : [];
 
   const recommendations = recommendByPhase(snapshot, priority);
+  const previousRecommendations = recommendByPhase(previousSnapshot, priority);
   const recommendationViews = recommendations.flatMap((recommendation) => {
     const phase = developmentPhases.find(
       (item) => item.id === recommendation.phaseId,
@@ -55,7 +65,21 @@ export async function loadDashboardData(
         item.phaseId === recommendation.phaseId && item.modelId === model?.id,
     );
     return phase && model && provider && summary
-      ? [{ phase, model, provider, recommendation, summary }]
+      ? [
+          {
+            phase,
+            model,
+            provider,
+            recommendation,
+            summary,
+            change: calculateRecommendationChange(
+              recommendation,
+              previousRecommendations.find(
+                (item) => item.phaseId === recommendation.phaseId,
+              ),
+            ),
+          },
+        ]
       : [];
   });
 
@@ -68,4 +92,14 @@ export async function loadDashboardData(
     recommendationViews,
     stack: calculateRecommendedStack(snapshot, priority),
   };
+}
+
+function shiftDate(
+  date: string | undefined,
+  dayDelta: number,
+): string | undefined {
+  if (!date) return undefined;
+  return new Date(Date.parse(`${date}T00:00:00.000Z`) + dayDelta * 86_400_000)
+    .toISOString()
+    .slice(0, 10);
 }

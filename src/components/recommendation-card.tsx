@@ -23,6 +23,7 @@ export function RecommendationCard({ view }: RecommendationCardProps) {
           <strong className="text-heading">
             {view.recommendation.winner.score.toFixed(1)}
           </strong>
+          <RecommendationChange change={view.change} />
         </div>
       </div>
 
@@ -49,6 +50,37 @@ export function RecommendationCard({ view }: RecommendationCardProps) {
         <Metric label="Latency" value={formatLatency(metrics.latencyMs)} />
       </dl>
     </Card>
+  );
+}
+
+function RecommendationChange({
+  change,
+}: Readonly<{ change: DashboardRecommendation["change"] }>) {
+  if (change.status === "unavailable") {
+    return (
+      <span className="text-label mt-1 block text-text-muted">
+        No previous-day comparison
+      </span>
+    );
+  }
+
+  const direction =
+    change.scoreDelta > 0 ? "Up" : change.scoreDelta < 0 ? "Down" : "Unchanged";
+  const signedScore =
+    change.scoreDelta > 0
+      ? `+${change.scoreDelta.toFixed(1)}`
+      : change.scoreDelta.toFixed(1);
+  const rankText =
+    change.rankDelta > 0
+      ? `up ${change.rankDelta} rank`
+      : change.rankDelta < 0
+        ? `down ${Math.abs(change.rankDelta)} rank`
+        : "same rank";
+
+  return (
+    <span className="text-label mt-1 block text-text-muted">
+      {direction} {signedScore} points · {rankText}
+    </span>
   );
 }
 
