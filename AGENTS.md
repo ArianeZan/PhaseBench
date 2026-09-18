@@ -51,4 +51,5 @@ Documentation and `AGENTS.md` review are part of every subtask, not separate cle
 
 - Product backlog: `docs/BACKLOG.md`
 - Current M0 execution plan: `docs/M0_PLAN.md`
+- Branch, rebase, and integration workflow: `docs/DELIVERY_WORKFLOW.md`
 - If implementation and documentation disagree, resolve the discrepancy within the active task.

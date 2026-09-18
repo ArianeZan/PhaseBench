@@ -8,6 +8,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 ## Branch and merge policy
 
+- Follow the complete terminal workflow in [`docs/DELIVERY_WORKFLOW.md`](DELIVERY_WORKFLOW.md).
 - Start each branch from the latest `master`.
 - Use `codex/<task-id>-<business-outcome>` branch names.
 - Use outcome-oriented task titles that a product or business stakeholder can understand; keep technical implementation details in the task body.
