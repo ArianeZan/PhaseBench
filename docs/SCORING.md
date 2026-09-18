@@ -85,3 +85,9 @@ Ranks are one-based. This sequence makes tied results independent of repository 
 Explanations select two or three non-missing metrics from the winner according to the chosen priority. Quality begins with quality and pass evidence, Value with cost, Speed with latency, Reliability with stability, and Balanced with quality, cost, and latency. Every reason carries its raw value and explicit unit alongside concise English copy.
 
 The generator describes observed winner values without claiming an unsupported margin over another model. If fewer than two relevant metrics are available, it returns an explicit error instead of inventing a persuasive explanation.
+
+## Recommended stack
+
+The standard workload contains one Debate task (2,800 input and 960 output tokens), one Plan task (3,300 input and 1,320 output tokens), and one Build task (5,400 input and 2,230 output tokens). For each phase, the selected priority chooses the winner. Cost and duration multiply the winner's per-task observations by task count; token estimates multiply the declared workload assumptions.
+
+Complete totals are the exact sum of the three phase estimates. If a phase, workload, cost, or latency is unavailable, the result lists missing phases and exposes `totals: null` so a partial figure cannot be mistaken for the complete workflow.

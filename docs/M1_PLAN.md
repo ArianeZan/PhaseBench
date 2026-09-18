@@ -148,6 +148,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-012a-complete-workflow-estimate`
 - **GitHub:** [#31](https://github.com/ArianeZan/PhaseBench/issues/31)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-010B, PB-011A
 - Select one recommendation per phase and aggregate estimated cost, duration, input tokens, and output tokens for the standard workload.
 - **Acceptance:** totals equal phase sums, assumptions and units are exposed, and incomplete phases produce an explicit result rather than a misleading total.
