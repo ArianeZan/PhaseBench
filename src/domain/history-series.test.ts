@@ -1,7 +1,11 @@
 import { describe, expect, it } from "vitest";
 
 import type { DailyModelSummary, ModelMetrics } from "./metrics";
-import { buildHistorySeries } from "./history-series";
+import {
+  buildHistorySeries,
+  resolveHistoryMetric,
+  resolveHistoryRange,
+} from "./history-series";
 
 const metrics = (qualityScore: number | null): ModelMetrics => ({
   qualityScore,
@@ -97,5 +101,14 @@ describe("buildHistorySeries", () => {
         modelIds: ["model-a"],
       }),
     ).toThrow("Duplicate history summary");
+  });
+});
+
+describe("history option resolution", () => {
+  it("accepts supported URL values and defaults invalid ones", () => {
+    expect(resolveHistoryMetric("latencyMs")).toBe("latencyMs");
+    expect(resolveHistoryMetric("unknown")).toBe("qualityScore");
+    expect(resolveHistoryRange("7")).toBe(7);
+    expect(resolveHistoryRange("365")).toBe(30);
   });
 });

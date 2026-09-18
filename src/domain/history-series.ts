@@ -20,6 +20,21 @@ export type HistoryMetric = (typeof historyMetrics)[number]["key"];
 export const historyRanges = [7, 14, 30] as const;
 export type HistoryRangeDays = (typeof historyRanges)[number];
 
+export function resolveHistoryMetric(value: string | undefined): HistoryMetric {
+  return historyMetrics.some((metric) => metric.key === value)
+    ? (value as HistoryMetric)
+    : "qualityScore";
+}
+
+export function resolveHistoryRange(
+  value: string | undefined,
+): HistoryRangeDays {
+  const parsed = Number(value);
+  return historyRanges.includes(parsed as HistoryRangeDays)
+    ? (parsed as HistoryRangeDays)
+    : 30;
+}
+
 export type HistoryPoint = Readonly<{
   date: string;
   value: number | null;

@@ -1,16 +1,43 @@
 import { PrioritySelector } from "@/components/priority-selector";
 import { RecommendationCard } from "@/components/recommendation-card";
 import { RecommendedStackView } from "@/components/recommended-stack";
+import { HistoryChart } from "@/components/history-chart";
+import { HistoryControls } from "@/components/history-controls";
+import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { resolveRecommendationPriority } from "@/domain/priorities";
 import { loadDashboardData } from "@/data/dashboard-data";
+import { loadHistoryData } from "@/data/history-data";
+import {
+  resolveHistoryMetric,
+  resolveHistoryRange,
+} from "@/domain/history-series";
+import { phaseIds, type PhaseId } from "@/domain/phases";
 
 export default async function Home({ searchParams }: PageProps<"/">) {
-  const requestedPriority = (await searchParams).priority;
+  const params = await searchParams;
+  const requestedPriority = params.priority;
   const selectedPriority = resolveRecommendationPriority(
     Array.isArray(requestedPriority) ? requestedPriority[0] : requestedPriority,
   );
   const dashboard = await loadDashboardData(selectedPriority);
+  const requestedPhase =
+    typeof params.phase === "string" ? params.phase : undefined;
+  const phase: PhaseId = phaseIds.includes(requestedPhase as PhaseId)
+    ? (requestedPhase as PhaseId)
+    : "debate";
+  const metric = resolveHistoryMetric(
+    typeof params.metric === "string" ? params.metric : undefined,
+  );
+  const range = resolveHistoryRange(
+    typeof params.range === "string" ? params.range : undefined,
+  );
+  const history = await loadHistoryData({
+    phaseId: phase,
+    metric,
+    rangeDays: range,
+    to: dashboard.date,
+  });
 
   return (
     <Container className="py-section flex min-h-[calc(100vh-10rem)] flex-col justify-center">
@@ -88,6 +115,26 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           stack={dashboard.stack}
         />
       </div>
+
+      <Card
+        as="section"
+        className="mt-6 p-5 sm:p-7"
+        aria-labelledby="history-heading"
+      >
+        <p className="text-label font-mono font-semibold tracking-[0.16em] text-accent uppercase">
+          Performance history
+        </p>
+        <h2 id="history-heading" className="text-heading mt-1 font-semibold">
+          How model performance is changing
+        </h2>
+        <HistoryControls
+          phase={phase}
+          metric={metric}
+          priority={selectedPriority}
+          range={range}
+        />
+        <HistoryChart data={history} />
+      </Card>
     </Container>
   );
 }

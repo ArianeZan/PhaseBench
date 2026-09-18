@@ -90,6 +90,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-017B · Make model trends understandable
 
+- **Status:** Completed
 - **Branch:** `codex/pb-017b-accessible-performance-trends`
 - **GitHub:** [#41](https://github.com/ArianeZan/PhaseBench/issues/41)
 - **Dependencies:** PB-017A, PB-013A
@@ -182,7 +183,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [ ] PB-014A–PB-014B merged
 - [ ] PB-015A–PB-015B merged
 - [x] PB-016A merged
-- [ ] PB-017A–PB-017B merged (PB-017A completed)
+- [x] PB-017A–PB-017B merged
 - [ ] PB-018A–PB-018B merged
 - [ ] PB-019A–PB-019B merged
 - [ ] PB-020A–PB-020B merged
