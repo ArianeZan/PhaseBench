@@ -37,6 +37,8 @@ A task is done when it meets its acceptance criteria, works in light and dark th
 
 ## M0 — Foundation
 
+M0 is decomposed into branch-sized subtasks in [`docs/M0_PLAN.md`](M0_PLAN.md). Every subtask includes documentation and `AGENTS.md` review before completion.
+
 ### PB-001 · Initialize the application
 
 - **Priority:** P0 · **Dependencies:** none
