@@ -1,4 +1,6 @@
 import type { Provider, ProviderId } from "@/domain/providers";
+import { Badge } from "@/components/ui/badge";
+import { VisuallyHidden } from "@/components/ui/visually-hidden";
 
 const markerClasses: Record<ProviderId, string> = {
   openai: "rounded-full bg-provider-openai",
@@ -13,17 +15,18 @@ type ProviderBadgeProps = {
 
 export function ProviderBadge({ provider }: ProviderBadgeProps) {
   return (
-    <span className="rounded-control inline-flex items-center gap-2.5 border border-border bg-surface px-3 py-2 shadow-card">
+    <Badge className="gap-2.5 px-3 py-2 shadow-card">
+      <VisuallyHidden>Provider:</VisuallyHidden>
       <span
         aria-hidden="true"
         className={`size-2.5 shrink-0 ${markerClasses[provider.id]}`}
       />
-      <span className="text-label font-mono text-text-muted">
+      <span aria-hidden="true" className="font-mono text-text-muted">
         {provider.shortName}
       </span>
       <span className="text-body font-medium text-foreground">
         {provider.name}
       </span>
-    </span>
+    </Badge>
   );
 }

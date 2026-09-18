@@ -1,4 +1,5 @@
 import type { DevelopmentPhase } from "@/domain/phases";
+import { Card } from "@/components/ui/card";
 
 type PhaseCardProps = {
   index: number;
@@ -7,7 +8,7 @@ type PhaseCardProps = {
 
 export function PhaseCard({ index, phase }: PhaseCardProps) {
   return (
-    <article className="rounded-card border border-border bg-surface p-5 shadow-card sm:p-6">
+    <Card as="article" className="p-5 sm:p-6">
       <div className="mb-8 flex items-center justify-between">
         <span className="text-label font-mono text-text-muted">
           {String(index + 1).padStart(2, "0")}
@@ -16,6 +17,6 @@ export function PhaseCard({ index, phase }: PhaseCardProps) {
       </div>
       <h2 className="text-heading font-semibold">{phase.name}</h2>
       <p className="text-body mt-2 text-text-muted">{phase.description}</p>
-    </article>
+    </Card>
   );
 }

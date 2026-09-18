@@ -151,6 +151,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-004d-reusable-interface`
 - **GitHub:** [#14](https://github.com/ArianeZan/PhaseBench/issues/14)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-004A, PB-004B
 - Add only the primitives needed immediately, such as container, card, button, badge, and visually hidden text.
 - **Acceptance:** primitives expose accessible defaults, avoid product-specific business logic, and have a small showcase route or test fixture.

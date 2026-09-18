@@ -79,3 +79,17 @@ Provider identity is communicated through three independent cues: full name, two
 | Other providers | `provider-generic`   | `OT` | Filled square          |
 
 Each provider token has light and dark values. Use these colors only for provider attribution, not for general status or interaction states. PhaseBench-owned shapes and text are used instead of vendor logos; introducing official logos requires a separate review of current vendor usage terms.
+
+## Interface primitives
+
+The initial primitives live in `src/components/ui`:
+
+| Primitive        | Responsibility                                                      |
+| ---------------- | ------------------------------------------------------------------- |
+| `Container`      | Consistent responsive page width and inline spacing                 |
+| `Card`           | Theme-aware grouped surface with optional semantic element          |
+| `Badge`          | Compact metadata and status presentation                            |
+| `Button`         | Accessible primary and secondary actions with focus/disabled states |
+| `VisuallyHidden` | Screen-reader context without visual layout impact                  |
+
+Primitives contain styling and accessibility defaults, not PhaseBench business logic. Prefer native semantic elements and pass an appropriate `as` value to `Card` when its content is an article or section. The `/foundation` route is the visual fixture for reviewing these primitives across themes and viewport sizes.
