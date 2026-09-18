@@ -14,3 +14,9 @@ Repository contracts, fixture implementations, SQLite access, and provider adapt
 - Returned arrays and values are treated as immutable snapshots.
 
 The interface deliberately contains no fixture, SQL, React, or Next.js types. A later SQLite implementation must preserve these semantics.
+
+## Composition
+
+`createRepositoryAccessor` turns a repository factory into a lazy, process-local singleton accessor. The data boundary owns both the factory selection and accessor. Routes import only the configured `getBenchmarkRepository` entry point added alongside the active implementation; they do not instantiate adapters. Reusable components never import either entry point or repository contract.
+
+Keeping factory selection out of the contract lets mock and SQLite implementations use different construction details while preserving the same consumer API. The accessor itself has no environment or framework dependency and can be constructed independently in tests.

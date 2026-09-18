@@ -12,7 +12,7 @@ The MVP will use simulated benchmark data, while later versions will read histor
 
 UI code will request application data through asynchronous repository contracts owned by the data boundary. Mock fixtures and the future SQLite implementation will satisfy the same contracts. Data implementations translate stored or external representations into domain concepts before returning them.
 
-No repository interface will be created until PB-007 defines the queries required by the product.
+`BenchmarkRepository` defines product-oriented queries for the catalog, daily snapshot, history, models, and runs. The active adapter is constructed behind a lazy repository accessor owned by the data boundary. Routes receive the configured repository through that entry point; components receive domain data as props.
 
 ## Consequences
 
@@ -29,5 +29,5 @@ No repository interface will be created until PB-007 defines the queries require
 
 ### Follow-up
 
-- Define contracts from product use cases in PB-007.
-- Keep fixtures behind repository implementations in PB-008.
+- Product-oriented contracts and the composition pattern were defined in PB-007.
+- Keep fixtures behind the mock repository implementation in PB-008.
