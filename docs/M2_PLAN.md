@@ -81,6 +81,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-017A · Prepare trustworthy history series
 
+- **Status:** Completed
 - **Branch:** `codex/pb-017a-trustworthy-history-series`
 - **GitHub:** [#40](https://github.com/ArianeZan/PhaseBench/issues/40)
 - **Dependencies:** PB-008C
@@ -181,7 +182,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [ ] PB-014A–PB-014B merged
 - [ ] PB-015A–PB-015B merged
 - [x] PB-016A merged
-- [ ] PB-017A–PB-017B merged
+- [ ] PB-017A–PB-017B merged (PB-017A completed)
 - [ ] PB-018A–PB-018B merged
 - [ ] PB-019A–PB-019B merged
 - [ ] PB-020A–PB-020B merged

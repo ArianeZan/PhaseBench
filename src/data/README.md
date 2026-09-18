@@ -22,3 +22,5 @@ The interface deliberately contains no fixture, SQL, React, or Next.js types. A 
 Keeping factory selection out of the contract lets mock and SQLite implementations use different construction details while preserving the same consumer API. The accessor itself has no environment or framework dependency and can be constructed independently in tests.
 
 The current entry point selects `createMockBenchmarkRepository`. That adapter validates every fixture relationship on first access, implements documented filters, returns history in chronological order and runs newest first, and returns `null` for missing single records. A future SQLite adapter replaces only the factory selection.
+
+`loadHistoryData` prepares chart-ready history without coupling visualization code to the repository. It supports 7, 14, and 30-day inclusive ranges and a curated set of quality, pass-rate, cost, latency, and stability metrics. Every series follows catalog model order, declares its unit, and contains one point per requested date; absent summaries and missing metric values remain explicit `null` gaps.
