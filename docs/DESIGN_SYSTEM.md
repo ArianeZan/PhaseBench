@@ -121,3 +121,5 @@ The recommendation priority selector uses real links rather than client-only sta
 The recommended workflow is an ordered list so Debate → Plan → Build remains explicit without relying on its visual layout. It stacks vertically on small screens and expands to three columns on large screens. Complete workflows show aggregate cost, duration, and token estimates; incomplete workflows name missing phases instead of presenting partial totals. Always keep the standard workload assumption visible beside these estimates.
 
 Performance history uses URL-backed phase, metric, and range controls. Charts must name their unit, preserve missing values as visual gaps, fit their container without horizontal page overflow, and include a keyboard-accessible table containing the same values. Legends identify models with text as well as provider color.
+
+The comparison table identifies winners with text, never color alone. It keeps explicit units in column headings or values and uses horizontal scrolling inside its own bordered region on narrow screens so no model metric is discarded.

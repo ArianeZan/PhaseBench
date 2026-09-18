@@ -5,9 +5,13 @@ import { classNames } from "@/lib/class-names";
 
 type PrioritySelectorProps = Readonly<{
   selectedPriority: RecommendationPriority;
+  pathname?: string;
 }>;
 
-export function PrioritySelector({ selectedPriority }: PrioritySelectorProps) {
+export function PrioritySelector({
+  selectedPriority,
+  pathname = "/",
+}: PrioritySelectorProps) {
   return (
     <nav aria-label="Recommendation priority">
       <ul className="grid grid-cols-2 gap-2 sm:grid-cols-5">
@@ -23,7 +27,7 @@ export function PrioritySelector({ selectedPriority }: PrioritySelectorProps) {
                     ? "border-accent bg-accent text-accent-foreground"
                     : "border-border bg-surface text-foreground hover:bg-surface-muted",
                 )}
-                href={{ pathname: "/", query: { priority: priority.id } }}
+                href={{ pathname, query: { priority: priority.id } }}
               >
                 <span className="text-body font-semibold">{priority.name}</span>
                 <span

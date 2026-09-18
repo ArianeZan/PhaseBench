@@ -101,6 +101,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-018A · Compare every model at a glance
 
+- **Status:** Completed
 - **Branch:** `codex/pb-018a-model-comparison-table`
 - **GitHub:** [#42](https://github.com/ArianeZan/PhaseBench/issues/42)
 - **Dependencies:** PB-014B
@@ -184,7 +185,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [ ] PB-015A–PB-015B merged
 - [x] PB-016A merged
 - [x] PB-017A–PB-017B merged
-- [ ] PB-018A–PB-018B merged
+- [ ] PB-018A–PB-018B merged (PB-018A completed)
 - [ ] PB-019A–PB-019B merged
 - [ ] PB-020A–PB-020B merged
 - [ ] PB-021A–PB-021C merged
