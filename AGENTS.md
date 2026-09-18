@@ -26,6 +26,8 @@ This file defines the repository-wide working agreement. Add nested `AGENTS.md` 
 - Do not mix opportunistic refactors with the task at hand.
 - Use Conventional Commit messages and include the task ID when useful, for example `feat: scaffold Next.js app (PB-001A)`.
 - Never commit secrets, local databases, generated output, dependency directories, or editor state.
+- Scope every GitHub CLI issue or pull-request command explicitly to `ArianeZan/PhaseBench` with `--repo ArianeZan/PhaseBench`.
+- Keep the GitHub issue state and the corresponding status in `docs/M0_PLAN.md` aligned when completing an M0 task.
 
 ## Completion requirements
 

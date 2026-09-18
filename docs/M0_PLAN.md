@@ -22,6 +22,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-001A · Make PhaseBench runnable locally
 
 - **Branch:** `codex/pb-001a-runnable-app`
+- **GitHub:** [#2](https://github.com/ArianeZan/PhaseBench/issues/2)
 - **Status:** Completed on 2026-09-18
 - **Dependencies:** none
 - Scaffold Next.js with App Router, TypeScript, Tailwind CSS, and `src/` layout without overwriting repository documentation.
@@ -32,6 +33,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-001B · Make everyday project commands predictable
 
 - **Branch:** `codex/pb-001b-project-commands`
+- **GitHub:** [#3](https://github.com/ArianeZan/PhaseBench/issues/3)
 - **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-001A
 - Provide clear scripts for development, build, start, lint, and type checking.
@@ -41,6 +43,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-001C · Introduce the PhaseBench product
 
 - **Branch:** `codex/pb-001c-product-introduction`
+- **GitHub:** [#4](https://github.com/ArianeZan/PhaseBench/issues/4)
 - **Dependencies:** PB-001A
 - Replace framework demo content with a minimal PhaseBench placeholder using the product name and tagline.
 - Add baseline page metadata and favicon handling without attempting the final dashboard design.
@@ -52,6 +55,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-002A · Organize the project for sustainable growth
 
 - **Branch:** `codex/pb-002a-project-organization`
+- **GitHub:** [#5](https://github.com/ArianeZan/PhaseBench/issues/5)
 - **Dependencies:** PB-001A
 - Establish initial directories for app routes, components, domain, data, and shared utilities, with lightweight barrel files only where useful.
 - **Acceptance:** boundaries are documented and imports resolve through the configured alias; no speculative abstractions are introduced.
@@ -60,6 +64,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-002B · Establish shared development conventions
 
 - **Branch:** `codex/pb-002b-development-conventions`
+- **GitHub:** [#6](https://github.com/ArianeZan/PhaseBench/issues/6)
 - **Dependencies:** PB-002A
 - Record conventions for filenames, React components, types, constants, server/client boundaries, and import direction.
 - **Acceptance:** conventions are concise, consistent with the scaffold, and captured in the closest applicable `AGENTS.md` file.
@@ -68,6 +73,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-002C · Preserve the reasoning behind key decisions
 
 - **Branch:** `codex/pb-002c-decision-history`
+- **GitHub:** [#7](https://github.com/ArianeZan/PhaseBench/issues/7)
 - **Dependencies:** PB-002A
 - Add a small ADR template and record the initial decisions: App Router, mock-data repository boundary, and styling approach.
 - **Acceptance:** decisions include context, choice, consequences, and status; contributors can add later ADRs consistently.
@@ -78,6 +84,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-003A · Catch code issues automatically
 
 - **Branch:** `codex/pb-003a-automatic-code-checks`
+- **GitHub:** [#8](https://github.com/ArianeZan/PhaseBench/issues/8)
 - **Dependencies:** PB-001A
 - Configure ESLint for Next.js and TypeScript with no unexplained rule suppression.
 - **Acceptance:** `npm run lint` succeeds on the repository and fails for a known invalid sample during local verification.
@@ -86,6 +93,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-003B · Keep the codebase consistently formatted
 
 - **Branch:** `codex/pb-003b-consistent-formatting`
+- **GitHub:** [#9](https://github.com/ArianeZan/PhaseBench/issues/9)
 - **Dependencies:** PB-001A
 - Add a consistent formatter configuration, ignore generated files, and expose check/write scripts.
 - **Acceptance:** the formatting check passes and repeated formatting is idempotent.
@@ -94,6 +102,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-003C · Verify every change before it is merged
 
 - **Branch:** `codex/pb-003c-pre-merge-verification`
+- **GitHub:** [#10](https://github.com/ArianeZan/PhaseBench/issues/10)
 - **Dependencies:** PB-001B, PB-003A, PB-003B
 - Add a single local command that runs formatting checks, linting, type checking, and the production build in a clear order.
 - **Acceptance:** the command exits non-zero on any failure and completes successfully on the branch.
@@ -104,6 +113,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-004A · Create a consistent visual language
 
 - **Branch:** `codex/pb-004a-visual-language`
+- **GitHub:** [#11](https://github.com/ArianeZan/PhaseBench/issues/11)
 - **Dependencies:** PB-001C
 - Define semantic tokens for surfaces, text, borders, accents, status, spacing, radii, and shadows for both themes.
 - **Acceptance:** components consume semantic tokens rather than raw palette values; core foreground/background combinations meet WCAG AA contrast.
@@ -112,6 +122,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-004B · Make content clear and readable
 
 - **Branch:** `codex/pb-004b-readable-content`
+- **GitHub:** [#12](https://github.com/ArianeZan/PhaseBench/issues/12)
 - **Dependencies:** PB-004A
 - Configure the chosen local or framework-optimized fonts and a responsive type scale.
 - **Acceptance:** fonts load without layout-breaking fallback behavior; headings and body text remain readable at 360 px.
@@ -120,6 +131,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-004C · Make AI providers easy to recognize
 
 - **Branch:** `codex/pb-004c-recognizable-providers`
+- **GitHub:** [#13](https://github.com/ArianeZan/PhaseBench/issues/13)
 - **Dependencies:** PB-004A
 - Define accessible visual identities for OpenAI, Anthropic, Google, and a generic provider using color plus a non-color cue.
 - **Acceptance:** identities work in both themes and remain distinguishable without color perception.
@@ -128,6 +140,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-004D · Build a reusable interface foundation
 
 - **Branch:** `codex/pb-004d-reusable-interface`
+- **GitHub:** [#14](https://github.com/ArianeZan/PhaseBench/issues/14)
 - **Dependencies:** PB-004A, PB-004B
 - Add only the primitives needed immediately, such as container, card, button, badge, and visually hidden text.
 - **Acceptance:** primitives expose accessible defaults, avoid product-specific business logic, and have a small showcase route or test fixture.
@@ -138,6 +151,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-005A · Respect each user's appearance preference
 
 - **Branch:** `codex/pb-005a-appearance-preference`
+- **GitHub:** [#15](https://github.com/ArianeZan/PhaseBench/issues/15)
 - **Dependencies:** PB-004A
 - Resolve light/dark theme from saved preference and system preference with a deterministic fallback.
 - **Acceptance:** the correct theme is applied on first render without a visible flash or hydration warning.
@@ -146,6 +160,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-005B · Let users choose light or dark mode
 
 - **Branch:** `codex/pb-005b-theme-choice`
+- **GitHub:** [#16](https://github.com/ArianeZan/PhaseBench/issues/16)
 - **Dependencies:** PB-005A, PB-004D
 - Add a keyboard-accessible control with an unambiguous accessible name and visible focus state.
 - **Acceptance:** users can switch themes, the choice persists after reload, and both modes render all foundation components correctly.
@@ -154,6 +169,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-005C · Validate the foundation across devices
 
 - **Branch:** `codex/pb-005c-cross-device-validation`
+- **GitHub:** [#17](https://github.com/ArianeZan/PhaseBench/issues/17)
 - **Dependencies:** PB-005B, PB-004C, PB-004D
 - Perform final M0 checks across themes, keyboard use, reduced motion, 360 px mobile, and desktop widths; fix only M0 regressions.
 - **Acceptance:** the unified verification command passes, no horizontal overflow or console errors remain, and M0 documentation matches the implementation.
