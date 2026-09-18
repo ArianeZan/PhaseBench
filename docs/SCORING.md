@@ -68,3 +68,14 @@ Each mode applies a second set of weights to the four normalized dimensions:
 | Balanced      |     25% |   25% |   25% |         25% |
 
 Every profile totals 100%. The non-primary weights prevent a model with a severe weakness from winning solely on one dimension, while the dominant weight keeps each mode aligned with its user-facing promise. These initial defaults are exported from one domain module and covered by tests.
+
+## Ranking and ties
+
+Rankings accept summaries from exactly one date and phase. Candidates without every dimension required by the selected profile are excluded rather than assigned an invented score. Eligible candidates are ordered by:
+
+1. weighted recommendation score, descending;
+2. normalized quality, descending;
+3. normalized reliability, descending;
+4. stable model ID, ascending.
+
+Ranks are one-based. This sequence makes tied results independent of repository or input order and keeps the strongest evidence ahead before the final lexical fallback.

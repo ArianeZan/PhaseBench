@@ -126,6 +126,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-010b-deterministic-model-ranking`
 - **GitHub:** [#29](https://github.com/ArianeZan/PhaseBench/issues/29)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-010A
 - Score and rank eligible models per phase with explicit missing-data handling and stable tie-breaking.
 - **Acceptance:** tests cover every priority, different winners, ties, incomplete inputs, and input-order independence.
