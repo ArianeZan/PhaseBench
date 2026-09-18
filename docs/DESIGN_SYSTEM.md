@@ -93,3 +93,15 @@ The initial primitives live in `src/components/ui`:
 | `VisuallyHidden` | Screen-reader context without visual layout impact                  |
 
 Primitives contain styling and accessibility defaults, not PhaseBench business logic. Prefer native semantic elements and pass an appropriate `as` value to `Card` when its content is an article or section. The `/foundation` route is the visual fixture for reviewing these primitives across themes and viewport sizes.
+
+## Theme resolution
+
+Theme state is resolved by `next-themes` before React hydrates:
+
+1. A saved `phasebench-theme` preference wins.
+2. Without a saved choice, the operating-system preference is used.
+3. If the system preference is unavailable, light mode is the deterministic fallback.
+
+The resolved value is applied as `light` or `dark` on the root HTML class. The root layout uses `suppressHydrationWarning` only on that element because the pre-hydration script updates its class. Theme transitions are temporarily disabled during resolution or changes to prevent distracting color flashes. Browser-native controls receive the matching `color-scheme` value.
+
+The provider is the smallest shared client boundary around the server-rendered application; pages and layouts remain Server Components.

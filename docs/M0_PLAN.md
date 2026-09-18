@@ -163,6 +163,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-005a-appearance-preference`
 - **GitHub:** [#15](https://github.com/ArianeZan/PhaseBench/issues/15)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-004A
 - Resolve light/dark theme from saved preference and system preference with a deterministic fallback.
 - **Acceptance:** the correct theme is applied on first render without a visible flash or hydration warning.
