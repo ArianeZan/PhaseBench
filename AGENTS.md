@@ -27,7 +27,7 @@ This file defines the repository-wide working agreement. Add nested `AGENTS.md` 
 - Use Conventional Commit messages and include the task ID when useful, for example `feat: make PhaseBench runnable locally (PB-001A)`.
 - Never commit secrets, local databases, generated output, dependency directories, or editor state.
 - Scope every GitHub CLI issue or pull-request command explicitly to `ArianeZan/PhaseBench` with `--repo ArianeZan/PhaseBench`.
-- Keep the GitHub issue state and the corresponding status in `docs/M0_PLAN.md` aligned when completing an M0 task.
+- Keep the GitHub issue state and the corresponding milestone-plan status aligned when completing a task.
 
 ## Completion requirements
 
@@ -52,7 +52,7 @@ Documentation and `AGENTS.md` review are part of every subtask, not separate cle
 ## Source of truth
 
 - Product backlog: `docs/BACKLOG.md`
-- Current M0 execution plan: `docs/M0_PLAN.md`
+- Milestone execution plans: `docs/M0_PLAN.md` and `docs/M1_PLAN.md`
 - Architecture and source boundaries: `docs/ARCHITECTURE.md`
 - Architecture decision records: `docs/decisions/README.md`
 - Branch, rebase, and integration workflow: `docs/DELIVERY_WORKFLOW.md`

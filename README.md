@@ -57,6 +57,7 @@ The current application contains the completed M0 foundation: responsive product
 - [Product backlog](docs/BACKLOG.md)
 - [M0 execution plan](docs/M0_PLAN.md)
 - [M0 validation record](docs/M0_VALIDATION.md)
+- [M1 execution plan](docs/M1_PLAN.md)
 - [Architecture and source boundaries](docs/ARCHITECTURE.md)
 - [Architecture decision records](docs/decisions/README.md)
 - [Code quality](docs/CODE_QUALITY.md)
