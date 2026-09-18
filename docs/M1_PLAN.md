@@ -28,6 +28,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-006b-benchmark-vocabulary`
 - **GitHub:** [#19](https://github.com/ArianeZan/PhaseBench/issues/19)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-006A
 - Define suites, benchmark cases, runs, results, statuses, attempts, and evaluation methods.
 - **Acceptance:** fixed and hidden cases are distinguishable, run provenance is representable, and numeric fields include units.

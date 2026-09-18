@@ -25,3 +25,11 @@ Priority labels and descriptions are presentation-ready catalog data. Scoring we
 ## Model lifecycle
 
 Models have stable IDs, provider ownership, a display name, a version, and an `active`, `preview`, or `retired` status. An optional ISO release date supports historical context without making catalog inclusion depend on a known release date.
+
+## Benchmark vocabulary
+
+A benchmark suite belongs to one development phase and carries an explicit version. Its cases declare whether they belong to the longitudinal `fixed` set or the rotating `hidden` set, plus one of three evaluation methods: automated tests, an AI judge, or a hybrid of both.
+
+Every run records the suite and model IDs, timestamps, status, runner and prompt versions, and the model configuration needed for reproduction. Case results record status and attempt count alongside quality, automated-test, judge, cost, latency, and token values. Units appear in field names (`costUsd`, `latencyMs`, `inputTokens`, and `outputTokens`) rather than relying on caller knowledge.
+
+Scores are stored on the 0–100 scale. Counts and monetary or timing measurements are non-negative. These constraints are domain invariants; data-source implementations must validate external or fixture data before returning it.
