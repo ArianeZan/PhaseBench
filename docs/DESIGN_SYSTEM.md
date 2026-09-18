@@ -117,3 +117,5 @@ Product routes share `AppShell` through the `(product)` route group. The shell o
 Primary navigation uses Next.js links and a small client boundary that reads only the pathname. The active destination exposes `aria-current="page"` and a text/surface treatment. A stable Suspense fallback protects future dynamic product routes while preserving the rest of the server-rendered shell.
 
 The recommendation priority selector uses real links rather than client-only state. Its selected value is stored in the `priority` query parameter, remains keyboard accessible before hydration, and is expressed with `aria-current` plus text and surface changes. Missing, repeated, or invalid values resolve deterministically to Balanced on the server.
+
+The recommended workflow is an ordered list so Debate → Plan → Build remains explicit without relying on its visual layout. It stacks vertically on small screens and expands to three columns on large screens. Complete workflows show aggregate cost, duration, and token estimates; incomplete workflows name missing phases instead of presenting partial totals. Always keep the standard workload assumption visible beside these estimates.

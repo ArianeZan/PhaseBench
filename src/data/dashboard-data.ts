@@ -12,6 +12,7 @@ import { recommendByPhase } from "@/domain/recommendation-engine";
 import type {
   PhaseRecommendation,
   RecommendedStack,
+  StackPhaseEstimate,
 } from "@/domain/recommendations";
 import { calculateRecommendedStack } from "@/domain/stack";
 import type { Provider } from "@/domain/providers";
@@ -25,6 +26,13 @@ export type DashboardRecommendation = Readonly<{
   change: RecommendationChange;
 }>;
 
+export type DashboardStackPhase = Readonly<{
+  phase: DevelopmentPhase;
+  model: AiModel;
+  provider: Provider;
+  estimate: StackPhaseEstimate;
+}>;
+
 export type DashboardData = Readonly<{
   date: string;
   priority: RecommendationPriority;
@@ -33,6 +41,7 @@ export type DashboardData = Readonly<{
   recommendations: readonly PhaseRecommendation[];
   recommendationViews: readonly DashboardRecommendation[];
   stack: RecommendedStack;
+  stackViews: readonly DashboardStackPhase[];
 }>;
 
 export async function loadDashboardData(
@@ -82,6 +91,20 @@ export async function loadDashboardData(
         ]
       : [];
   });
+  const stack = calculateRecommendedStack(snapshot, priority);
+  const stackViews = stack.phases.flatMap((estimate) => {
+    const phase = developmentPhases.find(
+      (item) => item.id === estimate.phaseId,
+    );
+    const model = catalog.models.find((item) => item.id === estimate.modelId);
+    const provider = catalog.providers.find(
+      (item) => item.id === model?.providerId,
+    );
+
+    return phase && model && provider
+      ? [{ phase, model, provider, estimate }]
+      : [];
+  });
 
   return {
     date: snapshot[0]?.date ?? "",
@@ -90,7 +113,8 @@ export async function loadDashboardData(
     snapshot,
     recommendations,
     recommendationViews,
-    stack: calculateRecommendedStack(snapshot, priority),
+    stack,
+    stackViews,
   };
 }
 

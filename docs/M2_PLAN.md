@@ -70,6 +70,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-016A · Summarize the complete AI workflow
 
+- **Status:** Completed
 - **Branch:** `codex/pb-016a-recommended-workflow-summary`
 - **GitHub:** [#39](https://github.com/ArianeZan/PhaseBench/issues/39)
 - **Dependencies:** PB-014B, PB-012A
@@ -179,7 +180,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [ ] PB-013A–PB-013B merged
 - [ ] PB-014A–PB-014B merged
 - [ ] PB-015A–PB-015B merged
-- [ ] PB-016A merged
+- [x] PB-016A merged
 - [ ] PB-017A–PB-017B merged
 - [ ] PB-018A–PB-018B merged
 - [ ] PB-019A–PB-019B merged

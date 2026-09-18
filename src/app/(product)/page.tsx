@@ -1,5 +1,6 @@
 import { PrioritySelector } from "@/components/priority-selector";
 import { RecommendationCard } from "@/components/recommendation-card";
+import { RecommendedStackView } from "@/components/recommended-stack";
 import { Container } from "@/components/ui/container";
 import { resolveRecommendationPriority } from "@/domain/priorities";
 import { loadDashboardData } from "@/data/dashboard-data";
@@ -80,6 +81,13 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           ))}
         </div>
       </section>
+
+      <div className="mt-6">
+        <RecommendedStackView
+          phases={dashboard.stackViews}
+          stack={dashboard.stack}
+        />
+      </div>
     </Container>
   );
 }

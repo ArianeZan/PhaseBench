@@ -10,6 +10,7 @@ describe("loadDashboardData", () => {
     expect(dashboard.priority).toBe("speed");
     expect(dashboard.recommendations).toHaveLength(3);
     expect(dashboard.recommendationViews).toHaveLength(3);
+    expect(dashboard.stackViews).toHaveLength(3);
     expect(
       dashboard.recommendationViews.every(
         (item) => item.change.status === "available",
