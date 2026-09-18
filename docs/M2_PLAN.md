@@ -121,6 +121,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-019A · Give every model a stable destination
 
+- **Status:** Completed
 - **Branch:** `codex/pb-019a-stable-model-destinations`
 - **GitHub:** [#44](https://github.com/ArianeZan/PhaseBench/issues/44)
 - **Dependencies:** PB-008C, PB-013B
@@ -187,7 +188,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [x] PB-016A merged
 - [x] PB-017A–PB-017B merged
 - [x] PB-018A–PB-018B merged
-- [ ] PB-019A–PB-019B merged
+- [ ] PB-019A–PB-019B merged (PB-019A completed)
 - [ ] PB-020A–PB-020B merged
 - [ ] PB-021A–PB-021C merged
 - [ ] Dashboard routes verified in both themes at 360 px and desktop width

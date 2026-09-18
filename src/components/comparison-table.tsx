@@ -52,7 +52,12 @@ export function ComparisonTable({
                 )}
               </td>
               <td className="border-b border-border px-4 py-4 font-semibold">
-                {row.model.name}
+                <Link
+                  className="hover:text-accent hover:underline"
+                  href={`/models/${row.model.id}`}
+                >
+                  {row.model.name}
+                </Link>
               </td>
               <td className="border-b border-border px-4 py-4">
                 {row.provider.name}
@@ -92,3 +97,4 @@ function format(
     ? "No data"
     : `${prefix}${value.toFixed(decimals)}${suffix}`;
 }
+import Link from "next/link";

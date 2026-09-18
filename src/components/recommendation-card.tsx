@@ -16,7 +16,14 @@ export function RecommendationCard({ view }: RecommendationCardProps) {
           <p className="text-label font-mono font-semibold tracking-[0.14em] text-accent uppercase">
             {view.phase.name}
           </p>
-          <h3 className="text-heading mt-2 font-semibold">{view.model.name}</h3>
+          <h3 className="text-heading mt-2 font-semibold">
+            <Link
+              className="hover:text-accent hover:underline"
+              href={`/models/${view.model.id}`}
+            >
+              {view.model.name}
+            </Link>
+          </h3>
         </div>
         <div className="text-right">
           <span className="text-label block text-text-muted">Score</span>
@@ -106,3 +113,4 @@ function formatLatency(value: number | null): string {
     ? "Not available"
     : `${Math.round(value).toLocaleString("en-US")} ms`;
 }
+import Link from "next/link";
