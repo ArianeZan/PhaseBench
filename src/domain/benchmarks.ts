@@ -28,6 +28,10 @@ export type BenchmarkCase = Readonly<{
   benchmarkSet: BenchmarkSet;
   evaluationMethod: EvaluationMethod;
   maxAttempts: number;
+  workload: Readonly<{
+    expectedInputTokens: number;
+    expectedOutputTokens: number;
+  }>;
 }>;
 
 export type RunConfiguration = Readonly<{

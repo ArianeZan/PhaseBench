@@ -68,6 +68,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-008a-representative-benchmark-catalog`
 - **GitHub:** [#23](https://github.com/ArianeZan/PhaseBench/issues/23)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-006C, PB-007A
 - Add four models, three suites, and five benchmark cases per phase with explicit fixed/hidden membership and workload assumptions.
 - **Acceptance:** every fixture references valid catalog entities and is clearly marked as synthetic.

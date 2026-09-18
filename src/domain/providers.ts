@@ -10,5 +10,5 @@ export const providers = [
   { id: "openai", name: "OpenAI", shortName: "OA" },
   { id: "anthropic", name: "Anthropic", shortName: "AN" },
   { id: "google", name: "Google", shortName: "GO" },
-  { id: "generic", name: "Other providers", shortName: "OT" },
+  { id: "mistral", name: "Mistral", shortName: "MI" },
 ] as const satisfies readonly Provider[];
