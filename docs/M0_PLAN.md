@@ -44,6 +44,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-001c-product-introduction`
 - **GitHub:** [#4](https://github.com/ArianeZan/PhaseBench/issues/4)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-001A
 - Replace framework demo content with a minimal PhaseBench placeholder using the product name and tagline.
 - Add baseline page metadata and favicon handling without attempting the final dashboard design.
