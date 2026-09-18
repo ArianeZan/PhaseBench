@@ -52,6 +52,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 - **Branch:** `codex/pb-015a-phase-winner-cards`
 - **GitHub:** [#37](https://github.com/ArianeZan/PhaseBench/issues/37)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-014B, PB-011A
 - Build responsive Debate, Plan, and Build cards with winner, provider, score, reasons, and essential metrics.
 - **Acceptance:** cards consume prepared view data and clearly label synthetic results.

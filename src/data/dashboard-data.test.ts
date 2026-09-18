@@ -9,6 +9,7 @@ describe("loadDashboardData", () => {
     expect(dashboard.date).toBe("2026-09-18");
     expect(dashboard.priority).toBe("speed");
     expect(dashboard.recommendations).toHaveLength(3);
+    expect(dashboard.recommendationViews).toHaveLength(3);
     expect(
       dashboard.recommendations.every((item) => item.priority === "speed"),
     ).toBe(true);

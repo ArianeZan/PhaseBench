@@ -1,9 +1,6 @@
-import { PhaseCard } from "@/components/phase-card";
 import { PrioritySelector } from "@/components/priority-selector";
-import { ProviderBadge } from "@/components/provider-badge";
+import { RecommendationCard } from "@/components/recommendation-card";
 import { Container } from "@/components/ui/container";
-import { developmentPhases } from "@/domain/phases";
-import { providers } from "@/domain/providers";
 import { resolveRecommendationPriority } from "@/domain/priorities";
 import { loadDashboardData } from "@/data/dashboard-data";
 
@@ -58,24 +55,28 @@ export default async function Home({ searchParams }: PageProps<"/">) {
       </section>
 
       <section
-        aria-label="Development phases"
-        className="mt-14 grid gap-3 sm:mt-20 sm:grid-cols-3"
+        aria-labelledby="recommendations-heading"
+        className="mt-14 sm:mt-20"
       >
-        {developmentPhases.map((phase, index) => (
-          <PhaseCard key={phase.name} index={index} phase={phase} />
-        ))}
-      </section>
-
-      <section aria-labelledby="provider-heading" className="mt-10">
-        <h2
-          id="provider-heading"
-          className="text-label font-mono font-semibold tracking-[0.16em] text-text-muted uppercase"
-        >
-          Initial provider coverage
-        </h2>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {providers.map((provider) => (
-            <ProviderBadge key={provider.id} provider={provider} />
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-label font-mono font-semibold tracking-[0.16em] text-accent uppercase">
+              Daily recommendations
+            </p>
+            <h2
+              id="recommendations-heading"
+              className="text-heading mt-1 font-semibold"
+            >
+              The strongest model for each phase
+            </h2>
+          </div>
+          <p className="text-label text-text-muted">
+            Synthetic benchmark data · {dashboard.date}
+          </p>
+        </div>
+        <div className="mt-5 grid gap-4 lg:grid-cols-3">
+          {dashboard.recommendationViews.map((view) => (
+            <RecommendationCard key={view.phase.id} view={view} />
           ))}
         </div>
       </section>
