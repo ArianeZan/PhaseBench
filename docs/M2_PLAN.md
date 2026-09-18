@@ -150,6 +150,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-020B · Show the evidence behind a run
 
+- **Status:** Completed
 - **Branch:** `codex/pb-020b-benchmark-run-evidence`
 - **GitHub:** [#47](https://github.com/ArianeZan/PhaseBench/issues/47)
 - **Dependencies:** PB-020A
@@ -191,7 +192,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [x] PB-017A–PB-017B merged
 - [x] PB-018A–PB-018B merged
 - [x] PB-019A–PB-019B merged
-- [ ] PB-020A–PB-020B merged (PB-020A completed)
+- [x] PB-020A–PB-020B merged
 - [ ] PB-021A–PB-021C merged
 - [ ] Dashboard routes verified in both themes at 360 px and desktop width
 - [ ] Unit/integration tests and production build pass

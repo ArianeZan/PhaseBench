@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
@@ -89,7 +90,12 @@ export default async function RunsPage({ searchParams }: PageProps<"/runs">) {
                       {item.suite.name}
                     </p>
                     <h3 className="text-body-lg mt-2 font-semibold">
-                      {item.model.name}
+                      <Link
+                        href={`/runs/${item.run.id}`}
+                        className="hover:text-accent hover:underline"
+                      >
+                        {item.model.name}
+                      </Link>
                     </h3>
                     <p className="text-label mt-1 text-text-muted">
                       {item.run.startedAt.replace("T", " ").slice(0, 16)} UTC ·{" "}
