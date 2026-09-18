@@ -4,17 +4,17 @@ import { developmentPhases } from "@/domain/phases";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-950 text-slate-100">
-      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-6 sm:px-8 lg:px-10">
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <header className="px-page mx-auto flex w-full max-w-6xl items-center justify-between py-6">
         <BrandMark />
-        <span className="rounded-full border border-slate-700 px-3 py-1.5 text-xs font-medium text-slate-400">
+        <span className="rounded-control border border-border px-3 py-1.5 text-xs font-medium text-text-muted">
           Foundation in progress
         </span>
       </header>
 
-      <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 py-16 sm:px-8 sm:py-24 lg:px-10">
+      <main className="px-page py-section mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center">
         <section aria-labelledby="hero-title" className="max-w-4xl">
-          <p className="mb-5 font-mono text-xs font-semibold tracking-[0.22em] text-cyan-300 uppercase sm:text-sm">
+          <p className="mb-5 font-mono text-xs font-semibold tracking-[0.22em] text-accent uppercase sm:text-sm">
             AI model intelligence for software teams
           </p>
           <h1
@@ -23,7 +23,7 @@ export default function Home() {
           >
             The right AI model for every phase.
           </h1>
-          <p className="mt-7 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg sm:leading-8">
+          <p className="mt-7 max-w-2xl text-base leading-7 text-text-muted sm:text-lg sm:leading-8">
             PhaseBench turns reproducible benchmarks into daily recommendations
             for every stage of AI-assisted development.
           </p>
@@ -39,7 +39,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="mx-auto flex w-full max-w-6xl items-center justify-between border-t border-slate-800 px-5 py-5 text-xs text-slate-500 sm:px-8 lg:px-10">
+      <footer className="px-page mx-auto flex w-full max-w-6xl items-center justify-between border-t border-border py-5 text-xs text-text-muted">
         <span>PhaseBench</span>
         <span>Debate · Plan · Build</span>
       </footer>

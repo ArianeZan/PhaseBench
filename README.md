@@ -59,5 +59,6 @@ The current application is the initial Next.js foundation. Product-specific scre
 - [Architecture and source boundaries](docs/ARCHITECTURE.md)
 - [Architecture decision records](docs/decisions/README.md)
 - [Code quality](docs/CODE_QUALITY.md)
+- [Design system](docs/DESIGN_SYSTEM.md)
 - [Delivery workflow](docs/DELIVERY_WORKFLOW.md)
 - [Repository working agreement](AGENTS.md)

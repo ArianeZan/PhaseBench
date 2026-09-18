@@ -121,6 +121,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-004a-visual-language`
 - **GitHub:** [#11](https://github.com/ArianeZan/PhaseBench/issues/11)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-001C
 - Define semantic tokens for surfaces, text, borders, accents, status, spacing, radii, and shadows for both themes.
 - **Acceptance:** components consume semantic tokens rather than raw palette values; core foreground/background combinations meet WCAG AA contrast.

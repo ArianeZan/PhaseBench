@@ -17,6 +17,7 @@ These rules apply to everything under `src/`. Repository-wide guidance remains i
 - Put reusable presentation and interaction in `src/components`.
 - Keep product rules out of components; components may format and display domain values but must not calculate recommendations.
 - Preserve semantic HTML, keyboard access, visible focus, and responsive behavior in every component change.
+- Use the semantic design tokens documented in `docs/DESIGN_SYSTEM.md`; do not use raw palette colors for structural UI.
 
 ## Server and client boundaries
 
