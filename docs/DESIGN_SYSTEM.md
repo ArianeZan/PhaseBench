@@ -123,3 +123,5 @@ The recommended workflow is an ordered list so Debate → Plan → Build remains
 Performance history uses URL-backed phase, metric, and range controls. Charts must name their unit, preserve missing values as visual gaps, fit their container without horizontal page overflow, and include a keyboard-accessible table containing the same values. Legends identify models with text as well as provider color.
 
 The comparison table identifies winners with text, never color alone. It keeps explicit units in column headings or values and uses horizontal scrolling inside its own bordered region on narrow screens so no model metric is discarded.
+
+Product routes share stable loading and error states. Loading placeholders preserve the page hierarchy, expose a polite status, and stop animating under reduced-motion preferences. Recoverable errors provide retry and dashboard actions without exposing internal messages. Empty collections and missing metrics must use direct English explanations and a useful next action rather than collapsing their section.

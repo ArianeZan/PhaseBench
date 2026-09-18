@@ -60,50 +60,58 @@ export default async function ModelPage({
         <h2 id="phase-profile" className="text-heading font-semibold">
           Performance by phase
         </h2>
-        <div className="mt-5 grid gap-4 lg:grid-cols-3">
-          {profile.phases.map(
-            ({ phase, summary, balancedRank, qualityChange }) => (
-              <Card as="article" className="p-5" key={phase.id}>
-                <p className="text-label font-mono text-accent uppercase">
-                  {phase.name}
-                </p>
-                <p className="text-heading mt-2 font-semibold">
-                  {balancedRank ? `#${balancedRank} balanced` : "Not ranked"}
-                </p>
-                <dl className="mt-5 grid grid-cols-2 gap-4 text-label">
-                  <Metric
-                    label="Quality"
-                    value={format(summary.metrics.qualityScore, "/100")}
-                  />
-                  <Metric
-                    label="30-day change"
-                    value={
-                      qualityChange === null
-                        ? "No data"
-                        : `${qualityChange >= 0 ? "+" : ""}${qualityChange.toFixed(1)}`
-                    }
-                  />
-                  <Metric
-                    label="Cost / task"
-                    value={format(summary.metrics.costUsd, "", "$", 4)}
-                  />
-                  <Metric
-                    label="Latency"
-                    value={format(summary.metrics.latencyMs, " ms", "", 0)}
-                  />
-                  <Metric
-                    label="Pass rate"
-                    value={format(summary.metrics.taskPassRate, "%")}
-                  />
-                  <Metric
-                    label="Stability"
-                    value={format(summary.metrics.stabilityScore, "/100")}
-                  />
-                </dl>
-              </Card>
-            ),
-          )}
-        </div>
+        {profile.phases.length ? (
+          <div className="mt-5 grid gap-4 lg:grid-cols-3">
+            {profile.phases.map(
+              ({ phase, summary, balancedRank, qualityChange }) => (
+                <Card as="article" className="p-5" key={phase.id}>
+                  <p className="text-label font-mono text-accent uppercase">
+                    {phase.name}
+                  </p>
+                  <p className="text-heading mt-2 font-semibold">
+                    {balancedRank ? `#${balancedRank} balanced` : "Not ranked"}
+                  </p>
+                  <dl className="mt-5 grid grid-cols-2 gap-4 text-label">
+                    <Metric
+                      label="Quality"
+                      value={format(summary.metrics.qualityScore, "/100")}
+                    />
+                    <Metric
+                      label="30-day change"
+                      value={
+                        qualityChange === null
+                          ? "No data"
+                          : `${qualityChange >= 0 ? "+" : ""}${qualityChange.toFixed(1)}`
+                      }
+                    />
+                    <Metric
+                      label="Cost / task"
+                      value={format(summary.metrics.costUsd, "", "$", 4)}
+                    />
+                    <Metric
+                      label="Latency"
+                      value={format(summary.metrics.latencyMs, " ms", "", 0)}
+                    />
+                    <Metric
+                      label="Pass rate"
+                      value={format(summary.metrics.taskPassRate, "%")}
+                    />
+                    <Metric
+                      label="Stability"
+                      value={format(summary.metrics.stabilityScore, "/100")}
+                    />
+                  </dl>
+                </Card>
+              ),
+            )}
+          </div>
+        ) : (
+          <Card className="mt-5 p-6">
+            <p className="text-body text-text-muted">
+              No current phase metrics are available for this model.
+            </p>
+          </Card>
+        )}
       </section>
       <section className="mt-10" aria-labelledby="recent-runs">
         <h2 id="recent-runs" className="text-heading font-semibold">

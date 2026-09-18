@@ -84,7 +84,16 @@ export default async function ComparisonPage({
           sort={sort}
           direction={direction}
         />
-        <ComparisonTable rows={comparison.rows} />
+        {comparison.rows.length ? (
+          <ComparisonTable rows={comparison.rows} />
+        ) : (
+          <div className="mt-6 rounded-card border border-border bg-surface p-6">
+            <h3 className="font-semibold">No models match this comparison</h3>
+            <p className="text-body mt-2 text-text-muted">
+              Change the phase or provider filters to include more models.
+            </p>
+          </div>
+        )}
       </section>
       <h1 className="text-display mt-4 font-semibold text-balance">
         Comparison

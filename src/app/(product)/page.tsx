@@ -107,6 +107,17 @@ export default async function Home({ searchParams }: PageProps<"/">) {
             <RecommendationCard key={view.phase.id} view={view} />
           ))}
         </div>
+        {dashboard.recommendationViews.length === 0 && (
+          <div className="mt-5 rounded-card border border-border bg-surface p-6">
+            <h3 className="font-semibold">
+              Recommendations are not available yet
+            </h3>
+            <p className="text-body mt-2 text-text-muted">
+              The latest benchmark snapshot does not contain enough comparable
+              phase data.
+            </p>
+          </div>
+        )}
       </section>
 
       <div className="mt-6">

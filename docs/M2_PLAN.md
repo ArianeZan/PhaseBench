@@ -161,6 +161,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-021A · Keep every screen informative in unusual states
 
+- **Status:** Completed
 - **Branch:** `codex/pb-021a-resilient-screen-states`
 - **GitHub:** [#48](https://github.com/ArianeZan/PhaseBench/issues/48)
 - **Dependencies:** PB-014–PB-020
@@ -193,7 +194,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [x] PB-018A–PB-018B merged
 - [x] PB-019A–PB-019B merged
 - [x] PB-020A–PB-020B merged
-- [ ] PB-021A–PB-021C merged
+- [ ] PB-021A–PB-021C merged (PB-021A completed)
 - [ ] Dashboard routes verified in both themes at 360 px and desktop width
 - [ ] Unit/integration tests and production build pass
 - [ ] Documentation and applicable `AGENTS.md` files reviewed
