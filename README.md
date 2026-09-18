@@ -60,6 +60,7 @@ The current application contains the completed M0 interface foundation and M1 re
 - [M0 validation record](docs/M0_VALIDATION.md)
 - [M1 execution plan](docs/M1_PLAN.md)
 - [M1 validation record](docs/M1_VALIDATION.md)
+- [M2 execution plan](docs/M2_PLAN.md)
 - [Architecture and source boundaries](docs/ARCHITECTURE.md)
 - [Domain model](docs/DOMAIN_MODEL.md)
 - [Mock data](docs/MOCK_DATA.md)

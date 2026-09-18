@@ -52,7 +52,7 @@ Documentation and `AGENTS.md` review are part of every subtask, not separate cle
 ## Source of truth
 
 - Product backlog: `docs/BACKLOG.md`
-- Milestone execution plans: `docs/M0_PLAN.md` and `docs/M1_PLAN.md`
+- Milestone execution plans: `docs/M0_PLAN.md`, `docs/M1_PLAN.md`, and `docs/M2_PLAN.md`
 - Architecture and source boundaries: `docs/ARCHITECTURE.md`
 - Architecture decision records: `docs/decisions/README.md`
 - Branch, rebase, and integration workflow: `docs/DELIVERY_WORKFLOW.md`
