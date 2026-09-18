@@ -32,7 +32,7 @@ Dependencies should point toward stable concepts:
 
 ## Current implementation
 
-The product introduction uses `developmentPhases` from the domain boundary and renders each phase with a reusable component. Data and shared-utility boundaries contain no speculative implementation; they document where concrete M1 capabilities will live when those capabilities are introduced.
+The product introduction uses `developmentPhases` from the domain boundary and renders each phase with a reusable component. M1 domain contracts describe the benchmark and recommendation vocabulary. The data boundary exposes `BenchmarkRepository`, an asynchronous read contract that keeps fixture and future SQLite details out of routes and components.
 
 The `@/*` alias resolves to `src/*` and should be used for imports that cross these top-level boundaries. Relative imports remain appropriate within a tightly related directory.
 

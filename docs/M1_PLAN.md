@@ -48,6 +48,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-007a-product-data-gateway`
 - **GitHub:** [#21](https://github.com/ArianeZan/PhaseBench/issues/21)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-006C
 - Define an asynchronous repository interface for catalog, daily summaries, history, and benchmark runs.
 - **Acceptance:** consumers can query by stable filters and never need to know whether data comes from fixtures or SQLite.
