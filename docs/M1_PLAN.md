@@ -19,6 +19,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-006a-recommendation-vocabulary`
 - **GitHub:** [#18](https://github.com/ArianeZan/PhaseBench/issues/18)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** M0, PB-002
 - Define providers, models, phases, and recommendation priorities as explicit domain concepts.
 - **Acceptance:** identifiers are stable, values have business-readable labels, and adding a provider or model does not require changing existing consumers.

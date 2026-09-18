@@ -1,13 +1,15 @@
-import type { Provider, ProviderId } from "@/domain/providers";
+import type { Provider } from "@/domain/providers";
 import { Badge } from "@/components/ui/badge";
 import { VisuallyHidden } from "@/components/ui/visually-hidden";
 
-const markerClasses: Record<ProviderId, string> = {
+const markerClasses: Record<string, string> = {
   openai: "rounded-full bg-provider-openai",
   anthropic: "rotate-45 rounded-[0.2rem] bg-provider-anthropic",
   google: "rounded-full border-2 border-provider-google bg-transparent",
   generic: "rounded-none bg-provider-generic",
 };
+
+const genericMarkerClasses = "rounded-none bg-provider-generic";
 
 type ProviderBadgeProps = {
   provider: Provider;
@@ -19,7 +21,7 @@ export function ProviderBadge({ provider }: ProviderBadgeProps) {
       <VisuallyHidden>Provider:</VisuallyHidden>
       <span
         aria-hidden="true"
-        className={`size-2.5 shrink-0 ${markerClasses[provider.id]}`}
+        className={`size-2.5 shrink-0 ${markerClasses[provider.id] ?? genericMarkerClasses}`}
       />
       <span aria-hidden="true" className="font-mono text-text-muted">
         {provider.shortName}

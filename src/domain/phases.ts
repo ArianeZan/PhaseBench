@@ -1,3 +1,13 @@
+export const phaseIds = ["debate", "plan", "build"] as const;
+
+export type PhaseId = (typeof phaseIds)[number];
+
+export type DevelopmentPhase = Readonly<{
+  id: PhaseId;
+  name: string;
+  description: string;
+}>;
+
 export const developmentPhases = [
   {
     id: "debate",
@@ -14,6 +24,4 @@ export const developmentPhases = [
     name: "Build",
     description: "Implementation, repository changes, testing, and debugging.",
   },
-] as const;
-
-export type DevelopmentPhase = (typeof developmentPhases)[number];
+] as const satisfies readonly DevelopmentPhase[];
