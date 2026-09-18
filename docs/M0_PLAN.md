@@ -141,6 +141,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-004c-recognizable-providers`
 - **GitHub:** [#13](https://github.com/ArianeZan/PhaseBench/issues/13)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-004A
 - Define accessible visual identities for OpenAI, Anthropic, Google, and a generic provider using color plus a non-color cue.
 - **Acceptance:** identities work in both themes and remain distinguishable without color perception.

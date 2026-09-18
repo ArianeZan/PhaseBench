@@ -14,6 +14,10 @@
   --pb-color-success: #15803d;
   --pb-color-warning: #a16207;
   --pb-color-danger: #b91c1c;
+  --pb-color-provider-openai: #0f766e;
+  --pb-color-provider-anthropic: #b45309;
+  --pb-color-provider-google: #2563eb;
+  --pb-color-provider-generic: #7c3aed;
 
   --pb-space-page: clamp(1.25rem, 4vw, 2.5rem);
   --pb-space-section: clamp(4rem, 9vw, 7rem);
@@ -36,6 +40,10 @@
   --color-success: var(--pb-color-success);
   --color-warning: var(--pb-color-warning);
   --color-danger: var(--pb-color-danger);
+  --color-provider-openai: var(--pb-color-provider-openai);
+  --color-provider-anthropic: var(--pb-color-provider-anthropic);
+  --color-provider-google: var(--pb-color-provider-google);
+  --color-provider-generic: var(--pb-color-provider-generic);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --text-display: clamp(3rem, 8vw, 6rem);
@@ -73,6 +81,10 @@
     --pb-color-success: #4ade80;
     --pb-color-warning: #facc15;
     --pb-color-danger: #f87171;
+    --pb-color-provider-openai: #5eead4;
+    --pb-color-provider-anthropic: #fbbf24;
+    --pb-color-provider-google: #60a5fa;
+    --pb-color-provider-generic: #c4b5fd;
     --pb-shadow-card: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px rgb(0 0 0 / 0.2);
   }
 }

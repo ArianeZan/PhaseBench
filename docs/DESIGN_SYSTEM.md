@@ -66,3 +66,16 @@ The responsive scale exposes semantic utilities:
 | `text-label`   | Compact labels, metadata, and status text  |
 
 Use the semantic scale before adding arbitrary font sizes. At 360 px, `text-display` resolves to 48 px and wraps naturally; body copy remains at least 14 px with a generous line height.
+
+## Provider identities
+
+Provider identity is communicated through three independent cues: full name, two-letter code, and marker shape. Color reinforces recognition but never carries identity alone.
+
+| Provider        | Token                | Code | Marker                 |
+| --------------- | -------------------- | ---- | ---------------------- |
+| OpenAI          | `provider-openai`    | `OA` | Filled circle          |
+| Anthropic       | `provider-anthropic` | `AN` | Rotated rounded square |
+| Google          | `provider-google`    | `GO` | Outlined circle        |
+| Other providers | `provider-generic`   | `OT` | Filled square          |
+
+Each provider token has light and dark values. Use these colors only for provider attribution, not for general status or interaction states. PhaseBench-owned shapes and text are used instead of vendor logos; introducing official logos requires a separate review of current vendor usage terms.

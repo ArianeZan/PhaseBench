@@ -1,6 +1,8 @@
 import { BrandMark } from "@/components/brand-mark";
 import { PhaseCard } from "@/components/phase-card";
+import { ProviderBadge } from "@/components/provider-badge";
 import { developmentPhases } from "@/domain/phases";
+import { providers } from "@/domain/providers";
 
 export default function Home() {
   return (
@@ -36,6 +38,20 @@ export default function Home() {
           {developmentPhases.map((phase, index) => (
             <PhaseCard key={phase.name} index={index} phase={phase} />
           ))}
+        </section>
+
+        <section aria-labelledby="provider-heading" className="mt-10">
+          <h2
+            id="provider-heading"
+            className="text-label font-mono font-semibold tracking-[0.16em] text-text-muted uppercase"
+          >
+            Initial provider coverage
+          </h2>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {providers.map((provider) => (
+              <ProviderBadge key={provider.id} provider={provider} />
+            ))}
+          </div>
         </section>
       </main>
 
