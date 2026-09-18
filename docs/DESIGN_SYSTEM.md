@@ -107,3 +107,5 @@ The resolved value is applied as `light` or `dark` on the root HTML class. The r
 The provider is the smallest shared client boundary around the server-rendered application; pages and layouts remain Server Components.
 
 `ThemeControl` provides a compact light/dark toggle with a theme-specific accessible name, native button keyboard behavior, and the shared visible focus treatment. It renders disabled until the client theme is known, preventing server/client markup differences. Selecting a mode writes the existing `phasebench-theme` preference, so the choice remains active after reload. Use this shared control instead of introducing route-specific theme switches.
+
+Global motion is reduced when the operating system exposes `prefers-reduced-motion: reduce`. New components must not override that preference with essential transitions or animations.

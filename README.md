@@ -50,12 +50,13 @@ npm run build
 npm run start
 ```
 
-The current application is the initial Next.js foundation. Product-specific screens and design will be introduced in subsequent M0 tasks.
+The current application contains the completed M0 foundation: responsive product framing, semantic light and dark themes, accessible interface primitives, and a persistent theme control. Product-specific benchmark screens will be introduced in later milestones.
 
 ## Project documentation
 
 - [Product backlog](docs/BACKLOG.md)
 - [M0 execution plan](docs/M0_PLAN.md)
+- [M0 validation record](docs/M0_VALIDATION.md)
 - [Architecture and source boundaries](docs/ARCHITECTURE.md)
 - [Architecture decision records](docs/decisions/README.md)
 - [Code quality](docs/CODE_QUALITY.md)

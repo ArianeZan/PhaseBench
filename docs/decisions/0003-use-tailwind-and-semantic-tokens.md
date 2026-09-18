@@ -29,5 +29,6 @@ Do not add a component library during M0 unless a later decision demonstrates a 
 
 ### Follow-up
 
-- Define semantic tokens in PB-004A.
-- Add only the immediately required interface primitives in PB-004D.
+- Semantic tokens were defined in PB-004A.
+- The initial interface primitives were added in PB-004D.
+- System-aware, persistent theme selection was completed in PB-005A and PB-005B.

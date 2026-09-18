@@ -183,6 +183,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-005c-cross-device-validation`
 - **GitHub:** [#17](https://github.com/ArianeZan/PhaseBench/issues/17)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-005B, PB-004C, PB-004D
 - Perform final M0 checks across themes, keyboard use, reduced motion, 360 px mobile, and desktop widths; fix only M0 regressions.
 - **Acceptance:** the unified verification command passes, no horizontal overflow or console errors remain, and M0 documentation matches the implementation.
@@ -190,11 +191,11 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 ## M0 completion checklist
 
-- [ ] PB-001A–PB-001C merged
-- [ ] PB-002A–PB-002C merged
-- [ ] PB-003A–PB-003C merged
-- [ ] PB-004A–PB-004D merged
-- [ ] PB-005A–PB-005C merged
-- [ ] Development, lint, formatting, type-check, and production-build commands documented and passing
-- [ ] Light and dark themes verified on mobile and desktop
-- [ ] README, ADRs, and applicable `AGENTS.md` files reviewed for accuracy
+- [x] PB-001A–PB-001C merged
+- [x] PB-002A–PB-002C merged
+- [x] PB-003A–PB-003C merged
+- [x] PB-004A–PB-004D merged
+- [x] PB-005A–PB-005C merged
+- [x] Development, lint, formatting, type-check, and production-build commands documented and passing
+- [x] Light and dark themes verified on mobile and desktop
+- [x] README, ADRs, and applicable `AGENTS.md` files reviewed for accuracy
