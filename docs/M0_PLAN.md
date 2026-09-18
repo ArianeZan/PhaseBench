@@ -32,6 +32,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 ### PB-001B · Make everyday project commands predictable
 
 - **Branch:** `codex/pb-001b-project-commands`
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-001A
 - Provide clear scripts for development, build, start, lint, and type checking.
 - **Acceptance:** every script runs and its purpose is documented; the repository uses exactly one lockfile/package manager.

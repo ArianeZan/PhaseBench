@@ -25,6 +25,18 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Project commands
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local development server with live reload. |
+| `npm run build` | Create and validate the optimized production build. |
+| `npm run start` | Serve an existing production build. |
+| `npm run lint` | Check the complete codebase with ESLint. |
+| `npm run typecheck` | Validate TypeScript without emitting files. |
+
+Run commands from the repository root. The project uses npm and commits `package-lock.json`; do not introduce a second package-manager lockfile.
+
 ## Production build
 
 ```bash
