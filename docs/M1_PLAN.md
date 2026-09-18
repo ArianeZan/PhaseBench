@@ -117,6 +117,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-010a-recommendation-priorities`
 - **GitHub:** [#28](https://github.com/ArianeZan/PhaseBench/issues/28)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-009B
 - Centralize the Quality, Value, Speed, Reliability, and Balanced weighting profiles.
 - **Acceptance:** every profile totals 100%, emphasizes its named outcome, and documents which normalized dimensions it uses.

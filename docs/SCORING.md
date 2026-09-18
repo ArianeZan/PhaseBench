@@ -54,3 +54,17 @@ When one component is missing, its weight is removed and the remaining available
 - Raw values remain available for explanations and auditability.
 - Bounds and composite weights are centralized constants, not embedded in UI code.
 - Recommendation-mode weights are a separate concern defined by PB-010A.
+
+## Recommendation priorities
+
+Each mode applies a second set of weights to the four normalized dimensions:
+
+| Priority      | Quality | Value | Speed | Reliability |
+| ------------- | ------: | ----: | ----: | ----------: |
+| Best quality  |     70% |   10% |    5% |         15% |
+| Best value    |     25% |   60% |    5% |         10% |
+| Fastest       |     15% |   10% |   65% |         10% |
+| Most reliable |     15% |   10% |    5% |         70% |
+| Balanced      |     25% |   25% |   25% |         25% |
+
+Every profile totals 100%. The non-primary weights prevent a model with a severe weakness from winning solely on one dimension, while the dominant weight keeps each mode aligned with its user-facing promise. These initial defaults are exported from one domain module and covered by tests.
