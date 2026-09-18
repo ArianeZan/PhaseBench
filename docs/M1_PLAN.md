@@ -37,6 +37,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-006c-recommendation-contracts`
 - **GitHub:** [#20](https://github.com/ArianeZan/PhaseBench/issues/20)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-006A, PB-006B
 - Define daily model summaries, metric samples, recommendations, explanations, and stack estimates.
 - **Acceptance:** all requested quality, pass-rate, automated-test, judge, cost, latency, token, attempt, and stability measures are represented without UI or storage dependencies.
