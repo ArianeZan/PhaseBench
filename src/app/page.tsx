@@ -1,33 +1,12 @@
-const phases = [
-  {
-    name: "Debate",
-    description: "Critical thinking, counterarguments, and alternatives.",
-  },
-  {
-    name: "Plan",
-    description: "Architecture, decomposition, clarity, and risk management.",
-  },
-  {
-    name: "Build",
-    description: "Implementation, repository changes, testing, and debugging.",
-  },
-] as const;
+import { BrandMark } from "@/components/brand-mark";
+import { PhaseCard } from "@/components/phase-card";
+import { developmentPhases } from "@/domain/phases";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-slate-950 text-slate-100">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-6 sm:px-8 lg:px-10">
-        <div className="flex items-center gap-3">
-          <span
-            aria-hidden="true"
-            className="grid size-9 place-items-center rounded-xl bg-cyan-300 font-mono text-sm font-black text-slate-950"
-          >
-            PB
-          </span>
-          <span className="text-sm font-semibold tracking-[0.18em] uppercase">
-            PhaseBench
-          </span>
-        </div>
+        <BrandMark />
         <span className="rounded-full border border-slate-700 px-3 py-1.5 text-xs font-medium text-slate-400">
           Foundation in progress
         </span>
@@ -54,25 +33,12 @@ export default function Home() {
           aria-label="Development phases"
           className="mt-14 grid gap-3 sm:mt-20 sm:grid-cols-3"
         >
-          {phases.map((phase, index) => (
-            <article
+          {developmentPhases.map((phase, index) => (
+            <PhaseCard
               key={phase.name}
-              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 sm:p-6"
-            >
-              <div className="mb-8 flex items-center justify-between">
-                <span className="font-mono text-xs text-slate-500">
-                  0{index + 1}
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="size-2 rounded-full bg-cyan-300"
-                />
-              </div>
-              <h2 className="text-xl font-semibold">{phase.name}</h2>
-              <p className="mt-2 text-sm leading-6 text-slate-400">
-                {phase.description}
-              </p>
-            </article>
+              index={index}
+              phase={phase}
+            />
           ))}
         </section>
       </main>

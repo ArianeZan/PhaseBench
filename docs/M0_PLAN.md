@@ -57,6 +57,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-002a-project-organization`
 - **GitHub:** [#5](https://github.com/ArianeZan/PhaseBench/issues/5)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-001A
 - Establish initial directories for app routes, components, domain, data, and shared utilities, with lightweight barrel files only where useful.
 - **Acceptance:** boundaries are documented and imports resolve through the configured alias; no speculative abstractions are introduced.
