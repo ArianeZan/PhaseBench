@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 
 import { Container } from "@/components/ui/container";
 import { ComparisonTable } from "@/components/comparison-table";
+import { ComparisonControls } from "@/components/comparison-controls";
 import { PrioritySelector } from "@/components/priority-selector";
 import { loadComparisonData } from "@/data/comparison-data";
+import {
+  resolveComparisonSort,
+  resolveSortDirection,
+} from "@/data/comparison-data";
+import { phaseIds } from "@/domain/phases";
 import { resolveRecommendationPriority } from "@/domain/priorities";
 
 export const metadata: Metadata = {
@@ -14,11 +20,29 @@ export const metadata: Metadata = {
 export default async function ComparisonPage({
   searchParams,
 }: PageProps<"/comparison">) {
-  const requestedPriority = (await searchParams).priority;
+  const params = await searchParams;
+  const requestedPriority = params.priority;
   const priority = resolveRecommendationPriority(
     Array.isArray(requestedPriority) ? requestedPriority[0] : requestedPriority,
   );
-  const comparison = await loadComparisonData(priority);
+  const phaseId =
+    typeof params.phase === "string" && phaseIds.includes(params.phase as never)
+      ? params.phase
+      : undefined;
+  const providerId =
+    typeof params.provider === "string" ? params.provider : undefined;
+  const sort = resolveComparisonSort(
+    typeof params.sort === "string" ? params.sort : undefined,
+  );
+  const direction = resolveSortDirection(
+    typeof params.direction === "string" ? params.direction : undefined,
+  );
+  const comparison = await loadComparisonData(priority, {
+    phaseId,
+    providerId,
+    sort,
+    direction,
+  });
   return (
     <Container className="py-section">
       <p className="text-label font-mono font-semibold tracking-[0.16em] text-accent uppercase">
@@ -52,6 +76,14 @@ export default async function ComparisonPage({
             Synthetic benchmark data · {comparison.date}
           </p>
         </div>
+        <ComparisonControls
+          priority={priority}
+          providers={comparison.providers}
+          phaseId={phaseId}
+          providerId={providerId}
+          sort={sort}
+          direction={direction}
+        />
         <ComparisonTable rows={comparison.rows} />
       </section>
       <h1 className="text-display mt-4 font-semibold text-balance">

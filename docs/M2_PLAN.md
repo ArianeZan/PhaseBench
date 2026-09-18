@@ -110,6 +110,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-018B · Help users find the right comparison
 
+- **Status:** Completed
 - **Branch:** `codex/pb-018b-focused-model-comparisons`
 - **GitHub:** [#43](https://github.com/ArianeZan/PhaseBench/issues/43)
 - **Dependencies:** PB-018A
@@ -185,7 +186,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 - [ ] PB-015A–PB-015B merged
 - [x] PB-016A merged
 - [x] PB-017A–PB-017B merged
-- [ ] PB-018A–PB-018B merged (PB-018A completed)
+- [x] PB-018A–PB-018B merged
 - [ ] PB-019A–PB-019B merged
 - [ ] PB-020A–PB-020B merged
 - [ ] PB-021A–PB-021C merged
