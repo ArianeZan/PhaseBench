@@ -97,6 +97,7 @@ Each subtask below is intended for one short-lived branch and one focused merge.
 
 - **Branch:** `codex/pb-009a-fair-metric-comparisons`
 - **GitHub:** [#26](https://github.com/ArianeZan/PhaseBench/issues/26)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-006C
 - Document normalization bounds, direction, missing-value behavior, outlier clamping, and zero-range behavior.
 - **Acceptance:** every recommendation input maps predictably to a 0–100 score and formulas can be explained to a product stakeholder.

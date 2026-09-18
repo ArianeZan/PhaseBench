@@ -61,6 +61,7 @@ The current application contains the completed M0 foundation: responsive product
 - [Architecture and source boundaries](docs/ARCHITECTURE.md)
 - [Domain model](docs/DOMAIN_MODEL.md)
 - [Mock data](docs/MOCK_DATA.md)
+- [Scoring and normalization](docs/SCORING.md)
 - [Architecture decision records](docs/decisions/README.md)
 - [Code quality](docs/CODE_QUALITY.md)
 - [Design system](docs/DESIGN_SYSTEM.md)
