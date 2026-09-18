@@ -1,10 +1,17 @@
 import { PhaseCard } from "@/components/phase-card";
+import { PrioritySelector } from "@/components/priority-selector";
 import { ProviderBadge } from "@/components/provider-badge";
 import { Container } from "@/components/ui/container";
 import { developmentPhases } from "@/domain/phases";
 import { providers } from "@/domain/providers";
+import { resolveRecommendationPriority } from "@/domain/priorities";
 
-export default function Home() {
+export default async function Home({ searchParams }: PageProps<"/">) {
+  const requestedPriority = (await searchParams).priority;
+  const selectedPriority = resolveRecommendationPriority(
+    Array.isArray(requestedPriority) ? requestedPriority[0] : requestedPriority,
+  );
+
   return (
     <Container className="py-section flex min-h-[calc(100vh-10rem)] flex-col justify-center">
       <section aria-labelledby="hero-title" className="max-w-4xl">
@@ -21,6 +28,24 @@ export default function Home() {
           PhaseBench turns reproducible benchmarks into daily recommendations
           for every stage of AI-assisted development.
         </p>
+      </section>
+
+      <section aria-labelledby="priority-heading" className="mt-12">
+        <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-label font-mono font-semibold tracking-[0.16em] text-text-muted uppercase">
+              Recommendation mode
+            </p>
+            <h2
+              id="priority-heading"
+              className="text-heading mt-1 font-semibold"
+            >
+              What matters most today?
+            </h2>
+          </div>
+          <p className="text-label text-text-muted">Saved in the page URL</p>
+        </div>
+        <PrioritySelector selectedPriority={selectedPriority} />
       </section>
 
       <section

@@ -8,6 +8,16 @@ export const priorityIds = [
 
 export type RecommendationPriority = (typeof priorityIds)[number];
 
+export const defaultPriority: RecommendationPriority = "balanced";
+
+export function resolveRecommendationPriority(
+  value: string | undefined,
+): RecommendationPriority {
+  return priorityIds.includes(value as RecommendationPriority)
+    ? (value as RecommendationPriority)
+    : defaultPriority;
+}
+
 export type PriorityDefinition = Readonly<{
   id: RecommendationPriority;
   name: string;

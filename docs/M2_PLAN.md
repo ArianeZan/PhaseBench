@@ -32,6 +32,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 - **Branch:** `codex/pb-014a-persistent-priority-choice`
 - **GitHub:** [#35](https://github.com/ArianeZan/PhaseBench/issues/35)
+- **Status:** Completed on 2026-09-18
 - **Dependencies:** PB-010B, PB-013A
 - Add a keyboard-accessible control for all five modes and persist the choice in the URL.
 - **Acceptance:** invalid or absent values fall back to Balanced; reload and shared URLs preserve valid choices.
