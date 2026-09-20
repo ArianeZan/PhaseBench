@@ -2,6 +2,8 @@
 
 PhaseBench converts raw benchmark metrics into stable 0–100 scores before applying recommendation priorities. The formulas use documented absolute bounds rather than the minimum and maximum in the current candidate list, so adding or removing a model does not silently change every existing score.
 
+Current inputs are synthetic. [Product Evidence and Limitations](PRODUCT_EVIDENCE.md) explains the evidence boundary and real-data path; this document is the source of truth for calculation behavior.
+
 ## Base normalization
 
 For a metric where a higher value is better:

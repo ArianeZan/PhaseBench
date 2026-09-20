@@ -2,6 +2,8 @@
 
 PhaseBench uses a deterministic synthetic dataset until real benchmark execution is introduced. Model names identify the intended comparison experience, but every score, cost, latency, token count, and result is illustrative and must not be presented as a current vendor claim.
 
+See [Product Evidence and Limitations](PRODUCT_EVIDENCE.md) for how fixture observations propagate into recommendations and what must exist before results can be treated as real evidence.
+
 ## Catalog
 
 The initial catalog contains four representative models from OpenAI, Anthropic, Google, and Mistral. It defines one versioned suite for each phase and five cases per suite:

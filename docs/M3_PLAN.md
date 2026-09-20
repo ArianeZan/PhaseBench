@@ -90,6 +90,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-026B · Explain product evidence and limitations
 
+- **Status:** Completed
 - **Branch:** `codex/pb-026b-clear-product-evidence`
 - **GitHub:** [#60](https://github.com/ArianeZan/PhaseBench/issues/60)
 - Consolidate scoring, synthetic data, recommendation assumptions, current limitations, and real-data next steps.
@@ -117,7 +118,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 - [x] PB-023A–PB-023B merged
 - [x] PB-024A–PB-024B merged
 - [x] PB-025A–PB-025B merged
-- [ ] PB-026A–PB-026B merged
+- [x] PB-026A–PB-026B merged
 - [ ] PB-027A–PB-027B merged
 - [x] Automated verification and accessibility checks pass
 - [x] Performance budgets and audit evidence are documented

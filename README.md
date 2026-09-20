@@ -107,6 +107,7 @@ Also run `npm run accessibility` after changes to semantics, themes, focus behav
 - [Domain model](docs/DOMAIN_MODEL.md)
 - [Mock data](docs/MOCK_DATA.md)
 - [Scoring and normalization](docs/SCORING.md)
+- [Product evidence and limitations](docs/PRODUCT_EVIDENCE.md)
 - [Architecture decision records](docs/decisions/README.md)
 - [Code quality](docs/CODE_QUALITY.md)
 - [Design system](docs/DESIGN_SYSTEM.md)
