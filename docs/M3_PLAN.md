@@ -64,6 +64,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-025A · Establish a performance baseline
 
+- **Status:** Completed
 - **Branch:** `codex/pb-025a-measured-performance-baseline`
 - **GitHub:** [#57](https://github.com/ArianeZan/PhaseBench/issues/57)
 - Measure route output, client boundaries, bundle weight, layout stability, and data duplication.

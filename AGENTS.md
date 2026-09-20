@@ -34,6 +34,7 @@ This file defines the repository-wide working agreement. Add nested `AGENTS.md` 
 Before considering a subtask complete:
 
 1. Run `npm run verify` for implementation or configuration changes. Documentation-only tasks may run narrower relevant checks.
+   Run `npm run performance` when a change can materially affect route payloads, client boundaries, or layout stability.
 2. Review affected documentation and update it when behavior, setup, architecture, or decisions changed.
 3. Review the applicable `AGENTS.md` files. Update them only when the task reveals a durable development rule or directory-specific convention.
 4. Report what changed, which checks ran, and any remaining limitations.
