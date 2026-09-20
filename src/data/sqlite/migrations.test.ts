@@ -16,7 +16,7 @@ describe("SQLite migrations", () => {
     applyMigrations(db);
     expect(
       db.prepare("SELECT count(*) AS count FROM schema_migrations").get(),
-    ).toEqual({ count: 1 });
+    ).toEqual({ count: loadMigrations().length });
     expect(db.pragma("integrity_check", { simple: true })).toBe("ok");
   });
   it("rejects changed applied migrations", () => {
@@ -35,13 +35,9 @@ describe("SQLite migrations", () => {
         .prepare("INSERT INTO models VALUES (?, ?, ?, ?, ?, ?, ?)")
         .run("model", "missing", "Model", "active", null, "now", "now"),
     ).toThrow(/FOREIGN KEY/);
-    db.prepare("INSERT INTO providers VALUES (?, ?, ?, ?, ?)").run(
-      "provider",
-      "Provider",
-      null,
-      "now",
-      "now",
-    );
+    db.prepare(
+      "INSERT INTO providers (provider_id, name, website_url, created_at, updated_at) VALUES (?, ?, ?, ?, ?)",
+    ).run("provider", "Provider", null, "now", "now");
     db.prepare("INSERT INTO models VALUES (?, ?, ?, ?, ?, ?, ?)").run(
       "model",
       "provider",

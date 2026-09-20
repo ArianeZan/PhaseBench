@@ -25,4 +25,6 @@ The current entry point selects `createMockBenchmarkRepository`. That adapter va
 
 The initial SQLite migration foundation lives in `src/data/sqlite`. It records a checksum for every applied migration, enables foreign keys, and is tested against an in-memory database. Generated database files remain local and are ignored by Git.
 
+`createSqliteBenchmarkRepository` implements the same read contract over a migrated database. It maps storage-only version identities back to stable domain IDs, preserves chronological history and newest-first run ordering, and returns `null` for missing single records. Repository selection and development seeding remain separate from this adapter.
+
 `loadHistoryData` prepares chart-ready history without coupling visualization code to the repository. It supports 7, 14, and 30-day inclusive ranges and a curated set of quality, pass-rate, cost, latency, and stability metrics. Every series follows catalog model order, declares its unit, and contains one point per requested date; absent summaries and missing metric values remain explicit `null` gaps.

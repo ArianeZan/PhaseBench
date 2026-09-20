@@ -28,6 +28,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-029A · Make stored evidence available
 
+- **Status:** Completed
 - **Branch:** `codex/pb-029a-available-stored-evidence`
 - **GitHub:** [#65](https://github.com/ArianeZan/PhaseBench/issues/65)
 - Implement the existing asynchronous repository contract over SQLite without changing product-facing consumers.
@@ -90,7 +91,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ## M4 completion checklist
 
-- [ ] PB-028A–PB-028B merged
+- [x] PB-028A–PB-028B merged
 - [ ] PB-029A–PB-029B merged
 - [ ] PB-030A–PB-030B merged
 - [ ] PB-031A–PB-031B merged

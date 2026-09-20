@@ -1,0 +1,1 @@
+ALTER TABLE providers ADD COLUMN short_name TEXT NOT NULL DEFAULT '';
