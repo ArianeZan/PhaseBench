@@ -4,7 +4,7 @@
 
 PhaseBench supports a standard Next.js Node.js deployment. This runbook prepares a reproducible release but does not select a hosting provider or authorize a public deployment. The first public release waits for an explicit provider decision and approval.
 
-The current MVP serves synthetic evidence from bundled fixtures. It has no external database, provider API, background worker, or required application environment variable.
+The current MVP serves synthetic evidence from bundled fixtures by default. It has no provider API or background worker. A deployment may select the optional SQLite repository using the variables documented in `.env.example`; production persistence requires a durable volume decision.
 
 ## Runtime contract
 

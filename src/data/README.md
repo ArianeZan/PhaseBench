@@ -27,4 +27,6 @@ The initial SQLite migration foundation lives in `src/data/sqlite`. It records a
 
 `createSqliteBenchmarkRepository` implements the same read contract over a migrated database. It maps storage-only version identities back to stable domain IDs, preserves chronological history and newest-first run ordering, and returns `null` for missing single records. Repository selection and development seeding remain separate from this adapter.
 
+The server-only `PHASEBENCH_DATA_SOURCE` setting selects `fixtures` (the safe default) or `sqlite`. SQLite also requires `PHASEBENCH_DATABASE_PATH`. Run `npm run db:seed` once for an empty local database or `npm run db:reset` to explicitly recreate the ignored `data/phasebench.sqlite` file from deterministic fixtures.
+
 `loadHistoryData` prepares chart-ready history without coupling visualization code to the repository. It supports 7, 14, and 30-day inclusive ranges and a curated set of quality, pass-rate, cost, latency, and stability metrics. Every series follows catalog model order, declares its unit, and contains one point per requested date; absent summaries and missing metric values remain explicit `null` gaps.

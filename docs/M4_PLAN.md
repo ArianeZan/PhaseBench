@@ -36,6 +36,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-029B · Switch data sources safely
 
+- **Status:** Completed
 - **Branch:** `codex/pb-029b-safe-data-source-switching`
 - **GitHub:** [#66](https://github.com/ArianeZan/PhaseBench/issues/66)
 - Add validated server-only repository selection and a deterministic development seed and recreation workflow.
@@ -92,7 +93,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 ## M4 completion checklist
 
 - [x] PB-028A–PB-028B merged
-- [ ] PB-029A–PB-029B merged
+- [x] PB-029A–PB-029B merged
 - [ ] PB-030A–PB-030B merged
 - [ ] PB-031A–PB-031B merged
 - [ ] PB-032A–PB-032B merged
