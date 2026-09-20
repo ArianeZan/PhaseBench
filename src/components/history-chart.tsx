@@ -1,15 +1,4 @@
-"use client";
-
-import {
-  CartesianGrid,
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
-
+import { HistoryVisualLoader } from "@/components/history-visual-loader";
 import type { HistoryData } from "@/data/history-data";
 
 const colors = [
@@ -32,44 +21,13 @@ export function HistoryChart({ data }: Readonly<{ data: HistoryData }>) {
   const names = new Map(data.models.map((model) => [model.id, model.name]));
   return (
     <>
-      <div
-        className="mt-6 h-80 min-w-0"
-        role="img"
-        aria-label={`${data.series.metric} history from ${data.series.from} to ${data.series.to}`}
-      >
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            data={rows}
-            margin={{ top: 8, right: 8, bottom: 8, left: 8 }}
-          >
-            <CartesianGrid stroke="var(--border)" strokeDasharray="3 3" />
-            <XAxis
-              dataKey="date"
-              tickFormatter={(value) => String(value).slice(5)}
-              minTickGap={24}
-            />
-            <YAxis unit={unitSuffix(data.series.unit)} width={64} />
-            <Tooltip
-              labelFormatter={(value) => String(value)}
-              formatter={(value, name) => [
-                formatValue(Number(value), data.series.unit),
-                names.get(String(name)) ?? name,
-              ]}
-            />
-            {data.series.models.map((series, index) => (
-              <Line
-                key={series.modelId}
-                dataKey={series.modelId}
-                name={series.modelId}
-                stroke={colors[index % colors.length]}
-                strokeWidth={2}
-                connectNulls={false}
-                dot={false}
-              />
-            ))}
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+      <HistoryVisualLoader
+        label={`${data.series.metric} history from ${data.series.from} to ${data.series.to}`}
+        models={data.models.map(({ id, name }) => ({ id, name }))}
+        rows={rows}
+        series={data.series.models.map(({ modelId }) => ({ modelId }))}
+        unit={data.series.unit}
+      />
       <ul
         className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-label"
         aria-label="Chart legend"
@@ -109,7 +67,7 @@ export function HistoryChart({ data }: Readonly<{ data: HistoryData }>) {
                     <td className="p-2 font-mono" key={series.modelId}>
                       {row[series.modelId] === null
                         ? "No data"
-                        : formatValue(
+                        : formatHistoryValue(
                             Number(row[series.modelId]),
                             data.series.unit,
                           )}
@@ -125,16 +83,7 @@ export function HistoryChart({ data }: Readonly<{ data: HistoryData }>) {
   );
 }
 
-function unitSuffix(unit: string) {
-  return unit === "percent"
-    ? "%"
-    : unit === "USD"
-      ? "$"
-      : unit === "milliseconds"
-        ? "ms"
-        : "";
-}
-function formatValue(value: number, unit: string) {
+export function formatHistoryValue(value: number, unit: string) {
   return unit === "USD"
     ? `$${value.toFixed(4)}`
     : unit === "milliseconds"

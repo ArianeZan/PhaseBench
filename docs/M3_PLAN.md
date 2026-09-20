@@ -72,6 +72,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-025B · Make the dashboard lightweight
 
+- **Status:** Completed
 - **Branch:** `codex/pb-025b-lightweight-dashboard-delivery`
 - **GitHub:** [#58](https://github.com/ArianeZan/PhaseBench/issues/58)
 - Address measured high-value costs without weakening accessibility or product behavior.
@@ -114,10 +115,10 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 - [x] PB-022A–PB-022B merged
 - [x] PB-023A–PB-023B merged
 - [x] PB-024A–PB-024B merged
-- [ ] PB-025A–PB-025B merged
+- [x] PB-025A–PB-025B merged
 - [ ] PB-026A–PB-026B merged
 - [ ] PB-027A–PB-027B merged
 - [x] Automated verification and accessibility checks pass
-- [ ] Performance budgets and audit evidence are documented
+- [x] Performance budgets and audit evidence are documented
 - [ ] Contributor and release documentation are complete
 - [ ] All M3 issues are closed and `master` is synchronized with GitHub

@@ -36,3 +36,16 @@ The comparison and detail screens remain server-rendered apart from shared shell
 ## Limitations
 
 These are controlled local measurements on desktop Chrome, not Core Web Vitals from real users. Network latency, device CPU, cache state, and hosting infrastructure are not represented. The suite protects payload and layout stability; public deployment should add field telemetry later.
+
+## PB-025B optimization evidence
+
+The chart's legend and table alternative now remain server-rendered while the Recharts visual loads when its reserved container approaches the viewport. The fixed-height container prevents layout shift. Browser coverage confirms that the visual appears after scrolling and that the table remains keyboard accessible.
+
+| Dashboard measure  |    Before |     After |              Change |
+| ------------------ | --------: | --------: | ------------------: |
+| Initial JavaScript | 243,176 B | 142,279 B | −100,897 B (−41.5%) |
+| HTML document      |  76,808 B |  94,316 B |           +17,508 B |
+| Initial CSS        |   5,522 B |   5,522 B |           No change |
+| CLS                |         0 |         0 |           No change |
+
+The HTML increase contains the serializable history values needed by the deferred visual and always-available table. The net initial payload is lower, and dashboard JavaScript is now within roughly 1 KB of routes without a chart.

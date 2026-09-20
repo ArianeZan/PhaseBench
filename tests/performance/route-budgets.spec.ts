@@ -71,5 +71,13 @@ for (const route of routes) {
     expect(metrics.cumulativeLayoutShift).toBeLessThanOrEqual(
       budgets.cumulativeLayoutShift,
     );
+    if (route.name === "dashboard") {
+      await page
+        .getByRole("img", { name: /qualityScore history/ })
+        .scrollIntoViewIfNeeded();
+      await expect(
+        page.locator(".recharts-responsive-container"),
+      ).toBeVisible();
+    }
   });
 }
