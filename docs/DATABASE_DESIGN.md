@@ -192,4 +192,4 @@ The current read contract deliberately exposes stable IDs and safe product evide
 
 ## Deliberate boundaries
 
-This design does not yet choose a SQLite library, migration tool, production volume, scheduler, provider SDK, or protected-content store. PB-028B selects only the minimum implementation mechanism required for executable migrations. Production persistence and paid provider access remain separate decisions.
+PB-028B uses the `better-sqlite3` Node adapter for the executable migration foundation because it supports the pinned Node 20 runtime without adding an ORM. This design does not choose a production volume, scheduler, provider SDK, or protected-content store. Production persistence and paid provider access remain separate decisions.

@@ -18,6 +18,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-028B · Create versioned benchmark storage
 
+- **Status:** Completed
 - **Branch:** `codex/pb-028b-versioned-benchmark-storage`
 - **GitHub:** [#64](https://github.com/ArianeZan/PhaseBench/issues/64)
 - Create executable, ordered SQLite migrations with the required tables, constraints, foreign keys, and query indexes.
