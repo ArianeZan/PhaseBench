@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { DashboardRecommendation } from "@/data/dashboard-data";
 import { ProviderBadge } from "@/components/provider-badge";
 import { Card } from "@/components/ui/card";
@@ -113,4 +115,3 @@ function formatLatency(value: number | null): string {
     ? "Not available"
     : `${Math.round(value).toLocaleString("en-US")} ms`;
 }
-import Link from "next/link";

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { ComparisonRow } from "@/data/comparison-data";
 
 export function ComparisonTable({
@@ -32,6 +34,16 @@ export function ComparisonTable({
           </tr>
         </thead>
         <tbody>
+          {rows.length === 0 && (
+            <tr>
+              <td
+                className="bg-surface px-4 py-8 text-center text-text-muted"
+                colSpan={9}
+              >
+                No comparison results are available for this selection.
+              </td>
+            </tr>
+          )}
           {rows.map((row) => (
             <tr
               key={`${row.phase.id}:${row.model.id}`}
@@ -97,4 +109,3 @@ function format(
     ? "No data"
     : `${prefix}${value.toFixed(decimals)}${suffix}`;
 }
-import Link from "next/link";

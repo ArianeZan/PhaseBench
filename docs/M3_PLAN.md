@@ -28,6 +28,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-023A · Keep decision screens accurate
 
+- **Status:** Completed
 - **Branch:** `codex/pb-023a-accurate-decision-screens`
 - **GitHub:** [#53](https://github.com/ArianeZan/PhaseBench/issues/53)
 - Add component tests for priority selection, recommendations, workflow totals, history alternatives, comparison winners, and empty states.
