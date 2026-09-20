@@ -100,6 +100,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-027A · Guard every proposed change
 
+- **Status:** Completed
 - **Branch:** `codex/pb-027a-guarded-proposed-changes`
 - **GitHub:** [#61](https://github.com/ArianeZan/PhaseBench/issues/61)
 - Add CI that installs deterministically and runs the repository verification command for proposed changes.

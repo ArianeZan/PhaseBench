@@ -66,3 +66,9 @@ Browser checks are intentionally separate from the fast pre-merge gate:
 Run the relevant browser command whenever a change can affect its contract.
 
 `npm run typecheck` regenerates Next.js route helpers before invoking TypeScript. This prevents stale generated route declarations after pages or layouts move.
+
+## Continuous integration
+
+`.github/workflows/verify.yml` runs for every pull request and every push to `master`. It grants only read access to repository contents, reads the exact Node.js version from `.nvmrc`, restores npm's download cache from `package-lock.json`, installs with `npm ci`, and runs the same `npm run verify` gate used locally.
+
+The cache never contains `node_modules`, build output, or test results, so it cannot bypass installation or validation. A newer commit cancels an obsolete run for the same pull request or branch. The job has a 15-minute timeout and contains no secrets or deployment permissions.
