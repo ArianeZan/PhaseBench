@@ -36,6 +36,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-023B · Keep exploration journeys connected
 
+- **Status:** Completed
 - **Branch:** `codex/pb-023b-connected-exploration-journeys`
 - **GitHub:** [#54](https://github.com/ArianeZan/PhaseBench/issues/54)
 - Test URL state, filtering, sorting, and navigation through model and run details, including not-found routes.

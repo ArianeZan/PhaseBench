@@ -133,7 +133,14 @@ export default async function ModelPage({
                   key={run.id}
                 >
                   <div>
-                    <p className="font-semibold">{suite.name}</p>
+                    <p className="font-semibold">
+                      <Link
+                        href={`/runs/${run.id}`}
+                        className="hover:text-accent hover:underline"
+                      >
+                        {suite.name}
+                      </Link>
+                    </p>
                     <p className="text-label mt-1 text-text-muted">
                       {run.startedAt.slice(0, 10)} · {run.status}
                     </p>
