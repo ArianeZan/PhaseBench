@@ -151,6 +151,8 @@ M0 is decomposed into branch-sized subtasks in [`docs/M0_PLAN.md`](M0_PLAN.md). 
 
 ## M3 — Quality and delivery
 
+M3 is decomposed into branch-sized subtasks in [`docs/M3_PLAN.md`](M3_PLAN.md). Provider-neutral quality and release preparation can proceed before a hosting provider is selected.
+
 ### PB-022 · Add domain unit tests
 
 - **Priority:** P0 · **Dependencies:** PB-009, PB-010, PB-012
