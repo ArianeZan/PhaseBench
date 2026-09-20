@@ -58,4 +58,11 @@ This order puts fast feedback first while keeping the production build as the fi
 
 Run deterministic domain tests independently with `npm test`.
 
+Browser checks are intentionally separate from the fast pre-merge gate:
+
+- `npm run accessibility` checks primary routes in both themes plus keyboard, responsive, reduced-motion, touch-target, and chart-alternative behavior.
+- `npm run performance` creates a production build and enforces the route budgets documented in `M3_PERFORMANCE_BASELINE.md`.
+
+Run the relevant browser command whenever a change can affect its contract.
+
 `npm run typecheck` regenerates Next.js route helpers before invoking TypeScript. This prevents stale generated route declarations after pages or layouts move.

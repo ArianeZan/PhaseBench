@@ -82,6 +82,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-026A · Make local development reproducible
 
+- **Status:** Completed
 - **Branch:** `codex/pb-026a-reproducible-local-development`
 - **GitHub:** [#59](https://github.com/ArianeZan/PhaseBench/issues/59)
 - Document prerequisites, installation, commands, project structure, testing, builds, and troubleshooting.
