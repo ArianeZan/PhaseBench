@@ -9,16 +9,42 @@ describe("calculateRecommendationChange", () => {
       ranked("model-b", 1, 91),
       ranked("model-a", 2, 90),
     ]);
-    const previous = recommendation("model-a", [
-      ranked("model-a", 1, 92),
-      ranked("model-b", 2, 89.25),
-    ]);
+    const previous = recommendation(
+      "model-a",
+      [ranked("model-a", 1, 92), ranked("model-b", 2, 89.25)],
+      "2026-09-17",
+    );
     expect(calculateRecommendationChange(current, previous)).toEqual({
       status: "available",
       scoreDelta: 1.75,
       rankDelta: 1,
       winnerChanged: true,
       previousWinnerModelId: "model-a",
+    });
+  });
+
+  it("is unavailable for same-day or future evidence", () => {
+    const current = recommendation("model-a", [ranked("model-a", 1, 90)]);
+    expect(calculateRecommendationChange(current, current)).toEqual({
+      status: "unavailable",
+    });
+    expect(
+      calculateRecommendationChange(
+        current,
+        recommendation("model-a", [ranked("model-a", 1, 91)], "2026-09-19"),
+      ),
+    ).toEqual({ status: "unavailable" });
+  });
+
+  it("is unavailable when the current winner has no previous rank", () => {
+    const current = recommendation("model-b", [ranked("model-b", 1, 90)]);
+    const previous = recommendation(
+      "model-a",
+      [ranked("model-a", 1, 89)],
+      "2026-09-17",
+    );
+    expect(calculateRecommendationChange(current, previous)).toEqual({
+      status: "unavailable",
     });
   });
 
@@ -40,11 +66,12 @@ describe("calculateRecommendationChange", () => {
 function recommendation(
   winnerId: string,
   ranking: readonly RankedModel[],
+  date = "2026-09-18",
 ): PhaseRecommendation {
   const winner = ranking.find((item) => item.modelId === winnerId);
   if (!winner) throw new Error("Test winner must exist in ranking.");
   return {
-    date: "2026-09-18",
+    date,
     phaseId: "debate",
     priority: "balanced",
     winner,

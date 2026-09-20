@@ -18,6 +18,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-022B · Protect changes and workflow estimates
 
+- **Status:** Completed
 - **Branch:** `codex/pb-022b-trusted-changes-and-estimates`
 - **GitHub:** [#52](https://github.com/ArianeZan/PhaseBench/issues/52)
 - Extend delta, explanation, and stack aggregate coverage across missing history, changed winners, incomplete phases, and scaled workloads.
@@ -105,7 +106,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ## M3 completion checklist
 
-- [ ] PB-022A–PB-022B merged
+- [x] PB-022A–PB-022B merged
 - [ ] PB-023A–PB-023B merged
 - [ ] PB-024A–PB-024B merged
 - [ ] PB-025A–PB-025B merged

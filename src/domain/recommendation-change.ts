@@ -18,7 +18,8 @@ export function calculateRecommendationChange(
   if (
     !previous ||
     previous.phaseId !== current.phaseId ||
-    previous.priority !== current.priority
+    previous.priority !== current.priority ||
+    previous.date >= current.date
   ) {
     return { status: "unavailable" };
   }

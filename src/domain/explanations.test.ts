@@ -73,4 +73,12 @@ describe("explainRecommendation", () => {
       "at least two",
     );
   });
+
+  it("keeps reliability evidence values and units explicit", () => {
+    expect(explainRecommendation(metrics, "reliability")).toEqual([
+      expect.objectContaining({ metric: "stabilityScore", unit: "score" }),
+      expect.objectContaining({ metric: "taskPassRate", unit: "percent" }),
+      expect.objectContaining({ metric: "averageAttempts", unit: "attempts" }),
+    ]);
+  });
 });

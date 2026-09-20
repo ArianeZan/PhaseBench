@@ -52,6 +52,41 @@ describe("calculateRecommendedStack", () => {
     if (stack.status !== "complete") return;
     expect(stack.totals.estimatedInputTokens).toBe(23_000);
     expect(stack.totals.estimatedOutputTokens).toBe(9020);
+    expect(stack.totals.estimatedCostUsd).toBe(
+      stack.phases.reduce((total, phase) => total + phase.estimatedCostUsd, 0),
+    );
+    expect(stack.totals.estimatedDurationMs).toBe(
+      stack.phases.reduce(
+        (total, phase) => total + phase.estimatedDurationMs,
+        0,
+      ),
+    );
+  });
+
+  it("reports every unavailable phase in workflow order", () => {
+    const stack = calculateRecommendedStack(
+      summaries.filter((summary) => summary.phaseId === "debate"),
+      "balanced",
+    );
+    expect(stack).toMatchObject({
+      status: "incomplete",
+      missingPhaseIds: ["plan", "build"],
+      totals: null,
+    });
+  });
+
+  it("does not publish partial totals when cost or latency is missing", () => {
+    const withoutCost = summaries.map((item) =>
+      item.phaseId === "plan"
+        ? { ...item, metrics: { ...item.metrics, costUsd: null } }
+        : item,
+    );
+    const stack = calculateRecommendedStack(withoutCost, "quality");
+    expect(stack).toMatchObject({
+      status: "incomplete",
+      missingPhaseIds: ["plan"],
+      totals: null,
+    });
   });
 
   it("returns no total when a phase is unavailable", () => {
