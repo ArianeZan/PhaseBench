@@ -58,7 +58,7 @@ export function ComparisonTable({
               <td className="border-b border-border px-4 py-4">
                 <span className="font-mono">#{row.ranking.rank}</span>
                 {row.isWinner && (
-                  <span className="ml-2 rounded-control bg-success px-2 py-1 text-[0.7rem] font-semibold text-white uppercase">
+                  <span className="ml-2 rounded-control bg-success px-2 py-1 text-[0.7rem] font-semibold text-success-foreground uppercase">
                     Winner
                   </span>
                 )}

@@ -12,6 +12,7 @@
   --pb-color-accent: #0e7490;
   --pb-color-accent-foreground: #ffffff;
   --pb-color-success: #15803d;
+  --pb-color-success-foreground: #ffffff;
   --pb-color-warning: #a16207;
   --pb-color-danger: #b91c1c;
   --pb-color-provider-openai: #0f766e;
@@ -38,6 +39,7 @@
   --color-accent: var(--pb-color-accent);
   --color-accent-foreground: var(--pb-color-accent-foreground);
   --color-success: var(--pb-color-success);
+  --color-success-foreground: var(--pb-color-success-foreground);
   --color-warning: var(--pb-color-warning);
   --color-danger: var(--pb-color-danger);
   --color-provider-openai: var(--pb-color-provider-openai);
@@ -78,6 +80,7 @@
   --pb-color-accent: #67e8f9;
   --pb-color-accent-foreground: #083344;
   --pb-color-success: #4ade80;
+  --pb-color-success-foreground: #052e16;
   --pb-color-warning: #facc15;
   --pb-color-danger: #f87171;
   --pb-color-provider-openai: #5eead4;

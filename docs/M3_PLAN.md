@@ -46,6 +46,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-024A · Eliminate automated accessibility blockers
 
+- **Status:** Completed
 - **Branch:** `codex/pb-024a-no-accessibility-blockers`
 - **GitHub:** [#55](https://github.com/ArianeZan/PhaseBench/issues/55)
 - Run automated accessibility checks across primary and detail routes in both themes.

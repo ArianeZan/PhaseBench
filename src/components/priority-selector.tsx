@@ -33,7 +33,7 @@ export function PrioritySelector({
                 <span
                   className={classNames(
                     "text-label mt-0.5",
-                    selected ? "text-accent-foreground/80" : "text-text-muted",
+                    selected ? "text-accent-foreground" : "text-text-muted",
                   )}
                 >
                   {priority.id === "balanced" ? "All outcomes" : priority.id}

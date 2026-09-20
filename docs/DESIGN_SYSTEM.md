@@ -15,6 +15,7 @@ PhaseBench uses semantic design tokens so components express purpose rather than
 | `accent`                       | Brand emphasis and active indicators     |
 | `accent-foreground`            | Content placed on the accent color       |
 | `success`, `warning`, `danger` | Semantic status indicators               |
+| `success-foreground`           | Content placed on the success color      |
 
 Use semantic utilities such as `bg-surface`, `text-text-muted`, `border-border`, and `bg-accent`. Do not use raw Tailwind palette colors for structural UI. Provider identities are a separate layer introduced in PB-004C.
 
