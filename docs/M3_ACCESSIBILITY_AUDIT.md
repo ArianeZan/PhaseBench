@@ -18,6 +18,17 @@ The initial run identified three serious color-contrast failures:
 
 The selected priority now uses the full `accent-foreground` color. Status content on solid success backgrounds uses a theme-aware `success-foreground` token. A second full run passed without exceptions.
 
+## Inclusive-use coverage
+
+The Playwright suite also verifies the following at 360 px and 1440 px widths:
+
+- banner, primary navigation, main, footer, and the page heading are exposed;
+- the first keyboard stops follow brand → Dashboard → Comparison → Runs;
+- the page has no horizontal viewport overflow;
+- mobile header, recommendation, history, and disclosure controls have targets of at least 24 × 24 px;
+- reduced-motion preference reduces transitions to the repository's near-zero fallback;
+- the history chart's table alternative can be reached and opened with the keyboard.
+
 ## Exceptions
 
 No exceptions are approved or required. Automated results complement rather than replace the keyboard, focus, touch-target, responsive, contrast, reduced-motion, and chart-alternative review in PB-024B.
