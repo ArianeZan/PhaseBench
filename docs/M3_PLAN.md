@@ -109,7 +109,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 ## M3 completion checklist
 
 - [x] PB-022A–PB-022B merged
-- [ ] PB-023A–PB-023B merged
+- [x] PB-023A–PB-023B merged
 - [ ] PB-024A–PB-024B merged
 - [ ] PB-025A–PB-025B merged
 - [ ] PB-026A–PB-026B merged
