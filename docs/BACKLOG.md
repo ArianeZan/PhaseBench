@@ -187,6 +187,8 @@ M3 is decomposed into branch-sized subtasks in [`docs/M3_PLAN.md`](M3_PLAN.md). 
 
 These tasks may follow the first demo.
 
+M4 is decomposed into branch-sized subtasks in [`docs/M4_PLAN.md`](M4_PLAN.md). The milestone proves real-data and benchmark boundaries without authorizing paid provider calls or production scheduling.
+
 ### PB-028 · Design the SQLite schema
 
 - **Priority:** P1 · **Dependencies:** PB-006, PB-007

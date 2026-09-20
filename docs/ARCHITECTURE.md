@@ -36,6 +36,8 @@ The dashboard uses `developmentPhases` from the domain boundary and renders each
 
 The active adapter is selected in `src/data/repository.ts`. Routes call `getBenchmarkRepository`; components receive its serializable results through props. The current mock adapter validates fixture relationships before serving data.
 
+The planned SQLite adapter follows the logical design in [`DATABASE_DESIGN.md`](DATABASE_DESIGN.md). Stable catalog identities remain distinct from immutable execution versions. The product repository stays read-oriented; future benchmark-run writes use a separate command boundary so UI consumers cannot access protected definitions or operational mutation APIs.
+
 The recommendation flow remains framework-neutral: repository summaries enter domain normalization, ranking, explanation, and stack functions. `recommendByPhase` is the orchestration entry point for the three phase recommendations; `calculateRecommendedStack` applies the same priority to the complete workflow.
 
 `loadDashboardData` is the route-facing application query for the dashboard. It reads one catalog and one daily snapshot, then derives phase recommendations and the stack under one validated priority. Components receive this prepared data and never invoke repositories or scoring rules.
