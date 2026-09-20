@@ -22,7 +22,7 @@ export function normalizeMetric(
   value: number | null,
   configuration: NormalizationRange,
 ): number | null {
-  if (value === null) return null;
+  if (value === null || !Number.isFinite(value)) return null;
   const span = configuration.maximum - configuration.minimum;
   if (span === 0) return 50;
 

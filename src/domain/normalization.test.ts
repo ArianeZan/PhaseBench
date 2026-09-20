@@ -29,6 +29,13 @@ describe("normalizeMetric", () => {
     expect(normalizeMetric(null, metricRanges.qualityScore)).toBeNull();
   });
 
+  it("treats non-finite evidence as missing", () => {
+    expect(normalizeMetric(Number.NaN, metricRanges.qualityScore)).toBeNull();
+    expect(
+      normalizeMetric(Number.POSITIVE_INFINITY, metricRanges.costUsd),
+    ).toBeNull();
+  });
+
   it("returns a neutral score for a zero range", () => {
     expect(
       normalizeMetric(12, { minimum: 10, maximum: 10, direction: "higher" }),
@@ -48,6 +55,10 @@ describe("weightedAverage", () => {
 
   it("returns null without evidence", () => {
     expect(weightedAverage([{ value: null, weight: 1 }])).toBeNull();
+  });
+
+  it("keeps zero as available evidence", () => {
+    expect(weightedAverage([{ value: 0, weight: 1 }])).toBe(0);
   });
 });
 
@@ -71,5 +82,25 @@ describe("normalizeModelMetrics", () => {
       speed: 50,
       reliability: 86.5,
     });
+  });
+
+  it("keeps partial quality evidence while exposing missing required dimensions", () => {
+    const result = normalizeModelMetrics({
+      qualityScore: 0,
+      taskPassRate: null,
+      automatedTestPassRate: null,
+      judgeScore: null,
+      costUsd: 0.75,
+      latencyMs: null,
+      inputTokens: 0,
+      outputTokens: 0,
+      averageAttempts: null,
+      stabilityScore: null,
+    });
+
+    expect(result.quality).toBe(0);
+    expect(result.value).toBe(0);
+    expect(result.speed).toBeNull();
+    expect(result.reliability).toBeNull();
   });
 });

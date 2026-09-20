@@ -51,6 +51,24 @@ describe("rankModels", () => {
       ),
     ).toThrow("one date and phase");
   });
+
+  it("returns an empty ranking without candidates", () => {
+    expect(rankModels([], "balanced")).toEqual([]);
+  });
+
+  it("rejects duplicate model summaries", () => {
+    expect(() =>
+      rankModels([candidates[0], candidates[0]], "balanced"),
+    ).toThrow("one summary per model");
+  });
+
+  it("excludes non-finite metric evidence", () => {
+    const invalid = summary("invalid", {
+      ...metrics(90, 0.3, 4000, 1.1, 90),
+      latencyMs: Number.NaN,
+    });
+    expect(rankModels([...candidates, invalid], "balanced")).toHaveLength(4);
+  });
 });
 
 function summary(

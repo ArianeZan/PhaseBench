@@ -82,6 +82,8 @@ Ranks are one-based. This sequence makes tied results independent of repository 
 
 Daily change compares today's winning model with that same model's position and score in the previous day's ranking under the same phase and priority. Rank delta is positive when the model moved upward. Winner change is reported separately from score movement; missing or non-comparable history produces an explicit unavailable result.
 
+Non-finite numeric inputs are treated as missing evidence before normalization. Rankings require at most one summary per model for a single date and phase; ambiguous duplicates are rejected rather than silently ranked twice.
+
 ## Winner explanations
 
 Explanations select two or three non-missing metrics from the winner according to the chosen priority. Quality begins with quality and pass evidence, Value with cost, Speed with latency, Reliability with stability, and Balanced with quality, cost, and latency. Every reason carries its raw value and explicit unit alongside concise English copy.

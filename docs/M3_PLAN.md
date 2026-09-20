@@ -10,6 +10,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-022A · Protect recommendations at the boundaries
 
+- **Status:** Completed
 - **Branch:** `codex/pb-022a-protected-recommendation-boundaries`
 - **GitHub:** [#51](https://github.com/ArianeZan/PhaseBench/issues/51)
 - Cover normalization and ranking with zeroes, limits, missing dimensions, ties, and input-order changes.

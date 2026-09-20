@@ -79,6 +79,13 @@ function assertComparableSummaries(
   ) {
     throw new Error("Rankings require summaries from one date and phase.");
   }
+
+  if (
+    new Set(summaries.map((summary) => summary.modelId)).size !==
+    summaries.length
+  ) {
+    throw new Error("Rankings require one summary per model.");
+  }
 }
 
 function round(value: number): number {
