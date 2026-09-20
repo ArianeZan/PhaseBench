@@ -108,6 +108,7 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 
 ### PB-027B · Prepare a provider-neutral release
 
+- **Status:** Completed
 - **Branch:** `codex/pb-027b-repeatable-release-preparation`
 - **GitHub:** [#62](https://github.com/ArianeZan/PhaseBench/issues/62)
 - Document environment variables, build/start commands, health checks, rollback expectations, and hosting-provider decision criteria.
@@ -120,8 +121,8 @@ The hosting provider remains an explicit product decision. Provider-neutral depl
 - [x] PB-024A–PB-024B merged
 - [x] PB-025A–PB-025B merged
 - [x] PB-026A–PB-026B merged
-- [ ] PB-027A–PB-027B merged
+- [x] PB-027A–PB-027B merged
 - [x] Automated verification and accessibility checks pass
 - [x] Performance budgets and audit evidence are documented
-- [ ] Contributor and release documentation are complete
-- [ ] All M3 issues are closed and `master` is synchronized with GitHub
+- [x] Contributor and release documentation are complete
+- [x] All M3 issues are closed and `master` is synchronized with GitHub
