@@ -179,6 +179,7 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ### PB-021C · Validate the complete dashboard experience
 
+- **Status:** Completed
 - **Branch:** `codex/pb-021c-trusted-dashboard-experience`
 - **GitHub:** [#50](https://github.com/ArianeZan/PhaseBench/issues/50)
 - **Dependencies:** PB-021B
@@ -187,16 +188,16 @@ Every subtask uses one short-lived branch, updates its GitHub issue and this pla
 
 ## M2 completion checklist
 
-- [ ] PB-013A–PB-013B merged
-- [ ] PB-014A–PB-014B merged
-- [ ] PB-015A–PB-015B merged
+- [x] PB-013A–PB-013B merged
+- [x] PB-014A–PB-014B merged
+- [x] PB-015A–PB-015B merged
 - [x] PB-016A merged
 - [x] PB-017A–PB-017B merged
 - [x] PB-018A–PB-018B merged
 - [x] PB-019A–PB-019B merged
 - [x] PB-020A–PB-020B merged
-- [ ] PB-021A–PB-021C merged (PB-021A completed)
-- [ ] Dashboard routes verified in both themes at 360 px and desktop width
-- [ ] Unit/integration tests and production build pass
-- [ ] Documentation and applicable `AGENTS.md` files reviewed
-- [ ] All M2 issues closed and `master` synchronized with GitHub
+- [x] PB-021A–PB-021C merged
+- [x] Dashboard routes verified in both themes at 360 px and desktop width
+- [x] Unit/integration tests and production build pass
+- [x] Documentation and applicable `AGENTS.md` files reviewed
+- [x] All M2 issues closed and `master` synchronized with GitHub
