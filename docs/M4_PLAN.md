@@ -46,6 +46,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-030A · Standardize model execution
 
+- **Status:** Completed
 - **Branch:** `codex/pb-030a-standard-model-execution`
 - **GitHub:** [#67](https://github.com/ArianeZan/PhaseBench/issues/67)
 - Define one provider-neutral request and response contract for prompts, model configuration, results, usage, latency, attempts, and cancellation.

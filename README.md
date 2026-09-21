@@ -110,6 +110,7 @@ Also run `npm run accessibility` after changes to semantics, themes, focus behav
 - [Product evidence and limitations](docs/PRODUCT_EVIDENCE.md)
 - [Provider-neutral release runbook](docs/RELEASE.md)
 - [Reproducible benchmark data design](docs/DATABASE_DESIGN.md)
+- [Provider-neutral model execution](docs/PROVIDER_EXECUTION.md)
 - [Architecture decision records](docs/decisions/README.md)
 - [Code quality](docs/CODE_QUALITY.md)
 - [Design system](docs/DESIGN_SYSTEM.md)
