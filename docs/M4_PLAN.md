@@ -54,6 +54,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-030B · Make provider failures predictable
 
+- **Status:** Completed
 - **Branch:** `codex/pb-030b-predictable-provider-failures`
 - **GitHub:** [#68](https://github.com/ArianeZan/PhaseBench/issues/68)
 - Define typed errors and policies for rate limits, retry eligibility, timeouts, cancellation, and partial usage or cost.

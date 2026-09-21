@@ -8,4 +8,6 @@ Adapters translate provider-specific requests and responses at this boundary. Be
 
 Cancellation is represented by `finishReason: "cancelled"` and zero attempts when no provider request started. Retry policy, typed infrastructure failures, rate-limit handling, and partial-attempt accounting are deliberately defined in PB-030B.
 
-The current tests use a provider-shaped fake adapter only. No production credentials or provider API calls are required.
+PB-030B classifies authentication, invalid request, rate limit, timeout, cancellation, provider unavailability, content filtering, and unknown failures. Each failure preserves attempt count, provider request ID, retry-after information, and partial usage when available. `decideRetry` applies an explicit maximum-attempt policy and bounded exponential backoff; cancellation and invalid requests are never retried.
+
+The current tests use provider-shaped fake adapters only. No production credentials or provider API calls are required.
