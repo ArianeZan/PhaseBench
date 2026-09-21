@@ -10,3 +10,5 @@ PB-031A defines every benchmark as an isolated journey with four explicit stages
 `BenchmarkJourneyPlan` requires at least one fixed case, allows a protected hidden set, rejects duplicate case versions, and requires explicit operational budgets. `BenchmarkJourneyResult` records ordered stage outcomes so partial and cancelled journeys remain traceable.
 
 The plan describes the lifecycle and safety boundary; PB-031B implements a deterministic test-adapter journey without real provider calls.
+
+PB-031B provides that prototype. It persists every terminal outcome, stops before another case when cancellation or cost limits apply, and never makes a real provider call. The prototype intentionally keeps case prompts and metrics minimal; production persistence and evaluation detail remain explicit follow-up boundaries.

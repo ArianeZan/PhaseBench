@@ -72,6 +72,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-031B · Prove an isolated benchmark run
 
+- **Status:** Completed
 - **Branch:** `codex/pb-031b-proven-isolated-benchmark-run`
 - **GitHub:** [#70](https://github.com/ArianeZan/PhaseBench/issues/70)
 - Implement a deterministic runner prototype using a test adapter and a small suite without making real provider calls.
