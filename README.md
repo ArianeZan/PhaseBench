@@ -113,6 +113,7 @@ Also run `npm run accessibility` after changes to semantics, themes, focus behav
 - [Provider-neutral model execution](docs/PROVIDER_EXECUTION.md)
 - [Controlled benchmark journey](docs/BENCHMARK_JOURNEY.md)
 - [Deterministic evaluation](docs/DETERMINISTIC_EVALUATION.md)
+- [Auditable AI-judge policy](docs/AI_JUDGE_POLICY.md)
 - [Architecture decision records](docs/decisions/README.md)
 - [Code quality](docs/CODE_QUALITY.md)
 - [Design system](docs/DESIGN_SYSTEM.md)

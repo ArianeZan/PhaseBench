@@ -90,6 +90,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-032B · Make AI judgments auditable
 
+- **Status:** Completed
 - **Branch:** `codex/pb-032b-auditable-ai-judgments`
 - **GitHub:** [#72](https://github.com/ArianeZan/PhaseBench/issues/72)
 - Define a constrained AI-judge fallback with versioned rubrics, structured evidence, conflict controls, and calibration.
@@ -101,8 +102,8 @@ M4 prepares and proves these capabilities without authorizing production provide
 - [x] PB-029A–PB-029B merged
 - [ ] PB-030A–PB-030B merged
 - [ ] PB-031A–PB-031B merged
-- [ ] PB-032A–PB-032B merged
+- [x] PB-032A–PB-032B merged
 - [ ] SQLite migrations and repository contract checks pass
-- [ ] Provider and runner boundaries are tested without production credentials
-- [ ] Evaluation policy and AI-judge limitations are documented
+- [x] Provider and runner boundaries are tested without production credentials
+- [x] Evaluation policy and AI-judge limitations are documented
 - [ ] All M4 issues are closed and `master` is synchronized with GitHub
