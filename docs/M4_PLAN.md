@@ -64,6 +64,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-031A · Define controlled benchmark journeys
 
+- **Status:** Completed
 - **Branch:** `codex/pb-031a-controlled-benchmark-journeys`
 - **GitHub:** [#69](https://github.com/ArianeZan/PhaseBench/issues/69)
 - Define the isolated load → execute → evaluate → persist lifecycle, including version identities, fixed and hidden sets, and operational limits.
