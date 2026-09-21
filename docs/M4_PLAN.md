@@ -82,6 +82,7 @@ M4 prepares and proves these capabilities without authorizing production provide
 
 ### PB-032A · Prefer deterministic verdicts
 
+- **Status:** Completed
 - **Branch:** `codex/pb-032a-deterministic-verdicts-first`
 - **GitHub:** [#71](https://github.com/ArianeZan/PhaseBench/issues/71)
 - Define versioned automated evaluator contracts and implement representative exact, schema, test, and rule-based checks.
